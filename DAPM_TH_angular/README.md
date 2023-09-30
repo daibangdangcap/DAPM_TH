@@ -1,27 +1,26 @@
-# DAPMTH
+# DAPM_TH
+Lê Thoại Bảo Ngọc - 21DH111233
+Trương Quang Huy - 21DH112525
+Nguyễn tiến Thành -21DH114111
+Lê Thành Duy Ân - 21DH110123
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+# 1. Mục đích: Áp dụng thành công 1 công nghệ mới để xây dựng 1 website bán hàng (bán cá cảnh)
+    Mục tiêu: có đầy đủ các chức năng cơ bản
+    Mục tiêu: Code xong các giao diện
+    Mục tiêu: Kết nối database thành công
+    Mục tiêu: Hosting thành công
+    Mục tiêu: Làm được chức năng thanh toán
+    Mục tiêu: Làm được tính năng xác thực bằng tài khoản khác. VD: Đăng nhập bằng Google, facebook
+    Mục tiêu: Làm trang web quản lý bên Admin
+    Mục tiêu: Làm trang web cho khách hàng
+    Mục tiêu: Đảm bảo web ít bug nhất có thể
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# 2. Công nghệ mình dùng: 
+    angular, node.js, git kraken, Thunder Client (Quản lý API), Jira, Github
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# 3. Phân công công việc:
+    - Ân: Thiết kế UI/UX, Code frontend. backend
+    - Huy: Test các bug còn có, Code frontend, Thiết kế UI/UX. backend
+    - Ngọc: phác thảo ý tưởng, code frontend, Thiết kế UI/UX, Test, Làm nhóm trưởng
+    - Thành: Thiết kế database, backend, Thiết kế UI/UX
