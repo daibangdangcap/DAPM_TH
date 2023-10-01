@@ -24,7 +24,10 @@ Lê Thành Duy Ân - 21DH110123 <br>
 
 ## 3. Phân công công việc:
 
-    - Ân: Thiết kế UI/UX, Code frontend. backend
-    - Huy: Test các bug còn có, Code frontend, Thiết kế UI/UX. backend
-    - Ngọc: phác thảo ý tưởng, code frontend, Thiết kế UI/UX, Test, Làm nhóm trưởng
-    - Thành: Thiết kế database, backend, Thiết kế UI/UX
+|   | Ân | Ngọc | Thành | Huy |
+| :-------- |:----------:| -------- | ------- |-------- |
+|Nhóm trưởng| |X|||
+|Thiết kế UI/UX|X|X|X|X|
+|Code frontend|X |X||X|
+|Code backend|X||X|X|
+|Kiểm thử|X|X|X|X|
