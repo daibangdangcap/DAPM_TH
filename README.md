@@ -1,9 +1,11 @@
 # DAPM_TH
 
-Lê Thoại Bảo Ngọc - 21DH111233 <br>
-Trương Quang Huy - 21DH112525 <br>
-Nguyễn Tiến Thành - 21DH114111 <br>
-Lê Thành Duy Ân - 21DH110123 <br>
+| Họ và Tên          | Mã Sinh Viên |
+|--------------------|--------------|
+| Lê Thoại Bảo Ngọc | 21DH111233   |
+| Trương Quang Huy   | 21DH112525   |
+| Nguyễn Tiến Thành | 21DH114111   |
+| Lê Thành Duy Ân   | 21DH110123   |
 
 ## 1. Mục đích: Áp dụng thành công 1 công nghệ mới để xây dựng 1 website bán hàng (bán cá cảnh)
 
