@@ -1,5 +1,7 @@
-# DAPM_TH
+# Hệ thống trang web bán cá cảnh
+Hệ thống trang web bán cá cảnh là một trang web hệ thống dành cho người có đam mê về thú cưng cá cảnh. Trang web này cho phép người dùng tìm kiếm và mua sắm các loại cá cảnh, thiết bị, thức ăn và nhiều sản phẩm khác dành cho cá cảnh của họ. 
 
+## Thành viên trong nhóm
 | Họ và Tên          | Mã Sinh Viên |
 |--------------------|--------------|
 | Lê Thoại Bảo Ngọc | 21DH111233   |
@@ -20,11 +22,23 @@
     - Làm trang web cho khách hàng
     - Đảm bảo web ít bug nhất có thể
 
-## 2. Công nghệ mình dùng:
+## 2. Công nghệ sử dụng:
 
-    Angular, node.js, git kraken, Thunder Client (Quản lý API), Jira, Github
+Frontend: Angular
+Backend: Node.js, Express.js
+Cơ Sở Dữ Liệu: MongoDB
+Quản Lý Phiên Bản: Git (GitHub), GitKraken
 
-## 3. Phân công công việc:
+## 3. Cài đặt:
+### Setup NodeJS
+```bash
+npm install
+```
+### Run file
+```bash
+ng serve --open
+```
+## 4. Phân công công việc:
 
 |   | Ân | Ngọc | Thành | Huy |
 | :-------- |:----------:| -------- | ------- |-------- |
@@ -33,3 +47,5 @@
 |Code frontend|X |X||X|
 |Code backend|X||X|X|
 |Kiểm thử|X|X|X|X|
+
+
