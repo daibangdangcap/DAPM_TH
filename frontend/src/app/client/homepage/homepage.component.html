@@ -1,1 +1,26 @@
-<p>homepage works!</p>
+<ngb-carousel
+	*ngIf="images1"
+	[showNavigationArrows]="showNavigationArrows"
+	[showNavigationIndicators]="showNavigationIndicators"
+>
+	<ng-template ngbSlide *ngFor="let image of images1">
+		<div class="picsum-img-wrapper">
+			<img [src]="image" alt="Random slide" class="imageSlider1"/>
+		</div>
+		<div class="carousel-caption">
+			<h3>No mouse navigation</h3>
+			<p>This carousel hides navigation arrows and indicators.</p>
+		</div>
+	</ng-template>
+</ngb-carousel>
+<ngb-carousel
+	*ngIf="images2"
+	[showNavigationArrows]="showNavigationArrows"
+	[showNavigationIndicators]="showNavigationIndicators"
+>
+	<ng-template ngbSlide *ngFor="let image of images2">
+		<div class="picsum-img-wrapper">
+			<img [src]="image" alt="Random slide" class="imageSlider2"/>
+		</div>
+	</ng-template>
+</ngb-carousel>
