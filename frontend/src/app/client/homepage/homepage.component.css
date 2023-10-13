@@ -1,0 +1,29 @@
+#background_image{
+  margin-top: 20px;
+  background-image: url(/assets/Hompage/background_water.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height : 1030px
+}
+#bt
+{
+  position: relative;
+  right: 650px;
+  top: 670px;
+  border-radius: 35px;
+  border-color: white;
+  padding: 20px;
+  padding-inline-end: 80px ;
+  padding-inline-start: 80px ;
+  font: "Inter";
+  font-weight: bold;
+  box-shadow: 0px 0px 10px black;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #316CB7;
+  background: white;
+}
+#bt:hover
+{
+  background-color: #989292;
+}
