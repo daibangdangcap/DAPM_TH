@@ -75,6 +75,7 @@ body{
   .imageSlider1{
     height: 500px;
   }
+}
 #background_image{
   background-image: url(/assets/Hompage/background_water.jpg);
   background-repeat: no-repeat;
