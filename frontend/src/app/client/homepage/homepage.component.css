@@ -1,5 +1,4 @@
 #background_image{
-  margin-top: 20px;
   background-image: url(/assets/Hompage/background_water.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -25,5 +24,46 @@
 }
 #bt:hover
 {
-  background-color: #989292;
+  background-color: #cccaca;
 }
+#margin-top
+{
+  margin-top: 30px;
+}
+#khung-muasam
+{
+  background-image: url(/assets/Hompage/background_khung_muasam.png);
+  background-repeat: no-repeat;
+  width: 90.2vw;
+  height: 39vw;
+}
+#khung-item
+{
+  border-radius: 25px;
+  background-color: white;
+  height: 400px;
+  width: 300px;
+  padding:10px;
+  border: 2px solid;
+}
+#font-muasam
+{
+  font-size: 4rem;
+  font-family: "Inter";
+  font-weight: bold;
+  color:#316CB7;
+  position: relative;
+  left : 90px;
+  top: 50px;
+}
+#font-name{
+  font-size: 2rem;
+  font-family: "Inter";
+  font-weight: bold;
+  margin-top: 20px;
+}
+#font-gia{
+  font-size: 1.5rem;
+  font-family: "Inter";
+}
+
