@@ -60,10 +60,13 @@
   font-size: 2rem;
   font-family: "Inter";
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 #font-gia{
   font-size: 1.5rem;
   font-family: "Inter";
 }
-
+#img-size{
+  width: 250px;
+  height: 230px;
+}
