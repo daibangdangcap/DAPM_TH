@@ -3,16 +3,45 @@
         <img src="assets\Shared\logo.png" style="width: 75px; image-rendering: optimizeQuality"/>
     </a>
 
-    <div class="d-flex">
+    <!-- <div class="d-flex">
         <div class="search">
           <input type="text" class="search-input" placeholder="Tìm kiếm..." />
-          <a><i class="fas fa-search fa-lg" style="color: #f1f1f1; font-size: 1.5rem"></i></a>
+          <a><i class="fas fa-search fa-lg" style="color: #f1f1f1; font-size: 1.5rem; background-color: #316CB7;"></i></a>
+        </div>
+    </div> -->
+    <div class="container">
+      <div class="search_wrap">
+        <div class="search_box">
+          <input type="text" class="input" placeholder="Tìm kiếm...">
+          <div class="btn btn-common">
+            <i class="fas fa-search" style="color: #f1f1f1; font-size: 1.25rem;"></i>
+          </div>
         </div>
       </div>
+    </div>
+
+    <!-- Button cho mobile -->
+    <i class="fa-solid fa-bars" style="color: #6f6f6f; font-size: 1.5rem" id="menu-icon"></i>
 
     <nav class="navbar">
-        <a class="nav-link" aria-current="page" href="#">Mua Sắm</a>
-        <a class="nav-link" href="#"><i class="fas fa-user-circle" style="color: #f1f1f1; font-size: 1.5rem"></i></a>
-        <a class="nav-link" href="#"><i class="fas fa-shopping-bag" style="color: #f1f1f1; font-size: 1.5rem"></i></a>
+        <a href="#">Mua Sắm</a>
+        <a href="#"><i class="fas fa-user-circle" style="font-size: 1.5rem"></i></a>
+        <a href="#"><i class="fas fa-shopping-bag" style="font-size: 1.5rem"></i></a>
     </nav>
 </header>
+<div class="nav-bg"></div>
+
+
+
+<!-- Button cho mobile -->
+<script>
+  const menuIcon = document.querySelector('#menu-icon');
+  const navbar = document.querySelector('.navbar');
+  const navbg = document.querySelector('.nav-bg');
+
+  menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('fa-x');
+    navbar.classList.toggle('active');
+    navbg.classList.toggle('active');
+  });
+</script>
