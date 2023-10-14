@@ -54,11 +54,7 @@ body{
 .imageItem{
   height: 350px; width: 100%;
 }
-
-.ItemList{
-
-}
-
+/* 
 @media only screen and (max-width:900px){
   .item{
     height: fit-content;
@@ -74,7 +70,8 @@ body{
   }
   .imageSlider1{
     height: 500px;
-  }
+  }} */
+
 #background_image{
   background-image: url(/assets/Hompage/background_water.jpg);
   background-repeat: no-repeat;
@@ -83,9 +80,9 @@ body{
 }
 #bt
 {
-  position: relative;
-  right: 650px;
-  top: 670px;
+  position: absolute;
+  left : 170px;
+  top : 680px;
   border-radius: 35px;
   border-color: white;
   padding: 20px;
