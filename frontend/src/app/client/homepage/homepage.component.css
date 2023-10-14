@@ -54,11 +54,7 @@ body{
 .imageItem{
   height: 350px; width: 100%;
 }
-
-.ItemList{
-
-}
-
+/* 
 @media only screen and (max-width:900px){
   .item{
     height: fit-content;
@@ -84,9 +80,9 @@ body{
 }
 #bt
 {
-  position: relative;
-  right: 650px;
-  top: 670px;
+  position: absolute;
+  left : 170px;
+  top : 680px;
   border-radius: 35px;
   border-color: white;
   padding: 20px;

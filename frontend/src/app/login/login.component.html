@@ -1,7 +1,46 @@
 <body class="vh-100 justify-content-center align-items-center d-flex">
-  <div class="bg-dark loginbox">
+  <div class="loginbox row">
     <div class="form">
-      <div class="text-center p-3">Đăng nhập</div>
+      <div
+        class="row text-center justify-content-center align-items-center"
+        style="height: 40%"
+      >
+        <p id="loginText" style="font-size: 3vw; font-family: sans-serif">
+          Đăng nhập
+        </p>
+      </div>
+      <!--  -->
+      <div class="row m-0">
+        <form>
+          <div class="input-group form-group pb-2">
+            <span class="input-group-text">
+              <i class="fa-solid fa-user" style="color: #cfcfcf"></i>
+            </span>
+            <input
+              type=" email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Tên đăng nhập"
+            />
+          </div>
+          <div class="input-group form-group">
+            <span class="input-group-text">
+              <i class="fa-solid fa-lock" style="color: #cfcfcf"></i>
+            </span>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Mật khẩu"
+            />
+          </div>
+          <p class="text-center pt-3" style="color: #7e7a7a">Quên mật khẩu?</p>
+          <div class="d-flex justify-content-center align-items-center">
+            <button type="submit" id="Submit">Đăng nhập</button>
+          </div>
+        </form>
+      </div>
     </div>
     <div class="right"></div>
   </div>
