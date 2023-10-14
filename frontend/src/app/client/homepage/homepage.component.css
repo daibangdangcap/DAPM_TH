@@ -6,7 +6,7 @@ body{
   height: 700px;
 }
 
-.imageSlider2{
+.image2{
   height: 500px;
   width:100%;
 }
@@ -47,5 +47,33 @@ body{
   width: 40%;
   height: fit-content;
   margin-left: 7.5%;
+  float: left;
+  overflow-wrap: break-word;
+}
+
+.imageItem{
+  height: 350px; width: 100%;
+}
+
+.ItemList{
+
+}
+
+@media only screen and (max-width:900px){
+  .item{
+    height: fit-content;
+    float: none;
+    width: 80%;
+  }
+  .imageItem{
+    height: 300px;
+    width: 100%;
+  }
+  .image2{
+    height: 300px;
+  }
+  .imageSlider1{
+    height: 500px;
+  }
 }
 

@@ -5,48 +5,34 @@
 	[showNavigationIndicators]="true"
 >
 	<ng-template ngbSlide *ngFor="let image of images1">
-		<div class="picsum-img-wrapper" style="height: 50%">
+		<div class="picsum-img-wrapper">
 			<img [src]="image" class="imageSlider1"/>
 		</div>
 	</ng-template>
 </ngb-carousel>
 
-<!--banner2-->
-<ngb-carousel
-	*ngIf="images2"
-	[showNavigationArrows]="true"
-	[showNavigationIndicators]="true"
->
-	<ng-template ngbSlide *ngFor="let image of images2">
-		<div class="picsum-img-wrapper">
-			<img [src]="image" class="imageSlider2"/>
-		</div>
-	</ng-template>
-</ngb-carousel>
+<img src="../../../assets/images/bannerB1.png" class="image2">
 
 <!--tiêu đề-->
 <h1 class="h1">Các Giống Cá Đến Từ</h1>
-<div style="display: flex; margin-bottom: 30px;">
+<div class="ItemList">
   <div class="item">
-    <img src="../../../assets/images/andoduong.png" style="height: 350px; width: 100%;">
+    <img src="../../../assets/images/andoduong.png" class="imageItem">
     <p class="tieudenho">Ấn Độ Dương</p>
     <p class="noidungnho">Cực kỳ đa dạng các loài cá nhiệt đới</p>
   </div>
-  <div style="float: right;" class="item">
-    <img src="../../../assets/images/andoduong.png" style="height: 350px; width: 100%;">
+  <div  class="item">
+    <img src="../../../assets/images/andoduong.png" class="imageItem">
     <p class="tieudenho">Thái Bình Dương</p>
     <p class="noidungnho">Có nhiều rặng san hô đầy màu sắc</p>
   </div>
-</div>
-
-<div style="display: flex;">
   <div class="item">
-    <img src="../../../assets/images/andoduong.png" style="height: 350px; width: 100%;">
+    <img src="../../../assets/images/andoduong.png" class="imageItem">
     <p class="tieudenho">Bắc Băng Dương</p>
     <p class="noidungnho">Thường có những loài cá quý hiếm</p>
   </div>
-  <div style="float: right;" class="item">
-    <img src="../../../assets/images/andoduong.png" style="height: 350px; width: 100%;">
+  <div class="item">
+    <img src="../../../assets/images/andoduong.png" class="imageItem">
     <p class="tieudenho">Nam Đại Dương</p>
     <p class="noidungnho">Có nhiều loài cá rất được ưa chuộng vì đặc tính dễ nuôi</p>
   </div>
