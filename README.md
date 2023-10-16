@@ -4,15 +4,15 @@ Hệ thống trang web bán cá cảnh là một trang web hệ thống dành ch
 ## :man_technologist: **Thành Viên Của Nhóm** :woman_technologist:
 | Họ và Tên          | Mã Sinh Viên |
 |--------------------|--------------|
-| `Lê Thoại Bảo Ngọc` | 21DH111233   |
+| `Lê Thành Duy Ân`  | 21DH110123   |
 | `Trương Quang Huy`   | 21DH112525   |
-| `Nguyễn Tiến Thành` | 21DH114111   |
-| `Lê Thành Duy Ân`   | 21DH110123   |
+| `Lê Thoại Bảo Ngọc` | 21DH111233   |
+| `Nguyễn Tiến Thành`   | 21DH114111   |
 
-## :dart: **Mục đích**: 
+## :dart: **Mục Đích:**
 Áp dụng thành công 1 công nghệ mới để xây dựng 1 website bán hàng (bán cá cảnh)
 
-### :mag: Mục tiêu: 
+### :pushpin: Mục Tiêu: 
 - Có đầy đủ các chức năng cơ bản
 - Hoàn tất các giao diện
 - Kết nối database thành công
@@ -30,23 +30,23 @@ Hệ thống trang web bán cá cảnh là một trang web hệ thống dành ch
 - `Cơ Sở Dữ Liệu`: MongoDB
 - `Quản Lý Phiên Bản`: Git (GitHub), GitKraken
 
-## :hammer_and_wrench: **Cài đặt**:
-### *Setup NodeJS*
+## :gear: **Cài Đặt**:
+#### - *Setup NodeJS*
 ```bash
 npm install
 ```
-### *Run file*
+#### - *Run file*
 ```bash
 ng serve --open
 ```
 ## :clipboard: **Phân Công Công Việc**:
 
-|   | Ân | Ngọc | Thành | Huy |
+|   | Ân | Huy | Ngọc | Thành |
 | :-------- |:----------:| -------- | ------- |-------- |
-|Nhóm trưởng| |X|||
+|Nhóm trưởng| | |X| |
 |Thiết kế UI/UX|X|X|X|X|
-|Code frontend|X |X||X|
-|Code backend|X||X|X|
+|Code frontend|X|X|X| |
+|Code backend|X|X| |X|
 |Kiểm thử|X|X|X|X|
 
 
