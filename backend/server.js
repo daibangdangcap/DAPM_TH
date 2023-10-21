@@ -10,3 +10,5 @@ app.listen(3800,()=>{
     mongoose.connect('mongodb+srv://DOANPHANMEMTH:DOANPHANMEMTH@cluster0.lxlha7v.mongodb.net/dapmth').then(()=> console.log('Connected to Mongo Successfully'))
     .catch(error=>handleError(error));
 })
+app.use(express.json())
+app.use(route)

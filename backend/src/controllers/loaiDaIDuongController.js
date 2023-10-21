@@ -1,4 +1,4 @@
-var loaiDaiDuong=require('../services/loaiSPService')
+var loaiDaiDuong=require('../services/loaiDaiDuongService')
 
 module.exports={
 }
