@@ -4,6 +4,16 @@
     box-sizing: border-box;
     color: #f9f9f9;
 }
+#image{
+    height: 300px; 
+    width: 200px; 
+    margin-left:50px
+}
+#ten_web{
+    margin-bottom: 30px; 
+    height: 52px;
+}
+
 a {
     text-decoration: none;
 }
@@ -15,10 +25,6 @@ ul {
     max-width: 1170px;
     margin: auto;
 }
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .footer {
     background: rgb(53,102,163);
@@ -28,6 +34,9 @@ ul {
 .footer-col {
     width: 30%;
     padding: 0 15px;
+}
+#col_larger{
+    width: 60% !important;
 }
 
 .footer-col h4 {
@@ -50,22 +59,22 @@ ul {
 }
 
 .footer-col ul li {
-    font-size: 16px;
+    font-size: 18px;
     color: #f6f4eccc;
     display: block;
     transition: all 0.3s ease;
 }
 .footer-col ul li:hover {
-    color: #F6F4EC;
+    color: #ffffff;
     padding-left: 8px;
 }
 .footer-col ul li a {
-    font-size: 16px;
+    font-size: 18px;
     color: #f6f4eccc;
     display: block;
 }
 .footer-col ul li a:hover {
-    color: #F6F4EC;
+    color: #ffffff;
     padding-left: 6px;
 }
 .footer-col ul li:not(:last-child) {
@@ -78,7 +87,7 @@ ul {
     height: 40px;
     width: 40px;
     background-color: rgba(255, 255, 255, 0.111);
-    margin: 8px 15px 10px 0;
+    margin: 15px 15px 10px 0;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
