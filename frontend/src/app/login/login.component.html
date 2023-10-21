@@ -1,32 +1,35 @@
-<body class="vh-100 justify-content-center align-items-center d-flex">
+<body class="vh-100 justify-content-center align-items-center d-flex mt-5">
   <div class="loginbox row">
     <div class="form">
       <div
         class="row text-center justify-content-center align-items-center"
         style="height: 40%"
       >
+        <!-- Header -->
         <p id="loginText" style="font-size: 3vw; font-family: sans-serif">
           Đăng nhập
         </p>
       </div>
-      <!--  -->
+      <!-- Body-login -->
       <div class="row m-0">
         <form>
+          <!-- Input Username -->
           <div class="input-group form-group pb-2">
-            <span class="input-group-text">
-              <i class="fa-solid fa-user" style="color: #cfcfcf"></i>
+            <span class="input-group-text style-change">
+              <i class="fa-solid fa-user" style="color: #777777"></i>
             </span>
             <input
-              type=" email"
+              type="email"
               class="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Tên đăng nhập"
             />
           </div>
+          <!-- Input Password -->
           <div class="input-group form-group">
-            <span class="input-group-text">
-              <i class="fa-solid fa-lock" style="color: #cfcfcf"></i>
+            <span class="input-group-text style-change">
+              <i class="fa-solid fa-lock" style="color: #777777"></i>
             </span>
             <input
               type="password"
@@ -35,6 +38,7 @@
               placeholder="Mật khẩu"
             />
           </div>
+          <!-- Button Submit -->
           <p class="text-center pt-3" style="color: #7e7a7a">Quên mật khẩu?</p>
           <div class="d-flex justify-content-center align-items-center">
             <button type="submit" id="Submit">Đăng nhập</button>
@@ -42,6 +46,15 @@
         </form>
       </div>
     </div>
-    <div class="right"></div>
+    <div class="right justify-content-center align-items-center d-flex">
+      <div class="form-2">
+        <img src="/assets/Login/log-Filet-O-Fish.png" class="mb-5 img-responsive" />
+        <p id="chao-ban-moi">Chào bạn mới</p>
+        <div style="margin-top: 60px;" class="text-center">
+          <p id="p-1">Bạn chưa có tài khoản ?</p>
+          <p id="p-2">Đăng nhập ngay</p>
+        </div>
+      </div>
+    </div>
   </div>
 </body>

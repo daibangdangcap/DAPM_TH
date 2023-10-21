@@ -12,7 +12,7 @@ body {
   width: 70%;
 }
 .form {
-  width: 70%;
+  width: 60%;
   border-radius: 8px;
   background: #f8f8f8;
   box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -24,19 +24,66 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.form-control{
-  background: #DEDEDE;}
+.form-control {
+  background: #dedede;
+  width: 200px;
+}
 #Submit {
   border-radius: 15px;
   background: #4a7ec0;
   color: #ffffff;
-  padding:10px 30px 10px 30px;
+  padding: 10px 30px 10px 30px;
   border: none;
   font-weight: bold;
 }
 .right {
-  width: 30%;
+  width: 40%;
   border-radius: 0px 8px 8px 0px;
   background: linear-gradient(0deg, #4278bd 0%, #a8cae4 100%);
   box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.style-change {
+  background: #dedede;
+}
+@font-face {
+  font-family: balloTamma;
+  src: url(/assets/BalooTamma-Regular.ttf);
+}
+#chao-ban-moi {
+  color: #f6f4ec;
+  text-align: center;
+  font-family: "balloTamma";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.img-responsive {
+  position: relative;
+  width: 100%;
+}
+.form-2 {
+  width: 70%;
+  height: 70%;
+}
+#p-1 {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#p-2 {
+  color: #d9673a;
+  font-family:"Inter";
+  font-size: 22px;
+  font-style:italic;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
 }

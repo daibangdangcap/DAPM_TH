@@ -2,7 +2,7 @@
 .khung-1 {
   position: relative;
   width: 100%;
-
+}
 body{
   background: #FEFEFE;
 }
@@ -59,7 +59,7 @@ body{
 .imageItem{
   height: 350px; width: 100%;
 }
-/* 
+/* /*
 @media only screen and (max-width:900px){
   .item{
     height: fit-content;
@@ -189,4 +189,4 @@ body{
 #img-size{
   width: 250px;
   height: 230px;
-}
+} */
