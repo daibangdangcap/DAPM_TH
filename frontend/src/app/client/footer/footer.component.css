@@ -31,6 +31,11 @@ ul {
     background: linear-gradient(0deg, rgba(53,102,163,1) 1%, rgba(62,112,174,1) 21%, rgba(120,164,210,1) 59%, rgba(168,202,228,1) 98%);
     padding: 20px 0;
 }
+
+.footer p{
+    color: rgb(227, 207, 171);
+}
+
 .footer-col {
     width: 30%;
     padding: 0 15px;
