@@ -54,7 +54,7 @@ body{
 .imageItem{
   height: 350px; width: 100%;
 }
-/* 
+
 @media only screen and (max-width:900px){
   .item{
     height: fit-content;
