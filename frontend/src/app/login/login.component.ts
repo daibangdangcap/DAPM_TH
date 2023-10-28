@@ -1,4 +1,4 @@
-import { Component ,ViewChild,ElementRef} from '@angular/core';
+import { Component ,ViewChild} from '@angular/core';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
