@@ -1,47 +1,72 @@
 <header class="header">
-    <a class="navbar-brand" href="#">
-        <img src="assets\Shared\logo.png" id="logo"/>
-    </a>
+  <a class="navbar-brand" [routerLink]="['/HomePage']">
+    <img src="assets\Shared\logo.png" id="logo" />
+  </a>
 
-    <!-- <div class="d-flex">
+  <!-- <div class="d-flex">
         <div class="search">
           <input type="text" class="search-input" placeholder="Tìm kiếm..." />
           <a><i class="fas fa-search fa-lg" style="color: #f1f1f1; font-size: 1.5rem; background-color: #316CB7;"></i></a>
         </div>
     </div> -->
-    <div class="container">
-      <div class="search_wrap">
-        <div class="search_box">
-          <input type="text" class="input" placeholder="Tìm kiếm...">
-          <div class="btn btn-common">
-            <i class="fas fa-search" style="color: #f1f1f1; font-size: 1.25rem;"></i>
-          </div>
+  <div class="container">
+    <div class="search_wrap">
+      <div class="search_box">
+        <input type="text" class="input" placeholder="Tìm kiếm..." />
+        <div class="btn btn-common">
+          <i
+            class="fas fa-search"
+            style="color: #f1f1f1; font-size: 1.25rem"
+          ></i>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Button cho mobile -->
-    <i class="fa-solid fa-bars" style="color: #6f6f6f; font-size: 1.5rem" id="menu-icon"></i>
+  <!-- Button cho mobile -->
+  <i
+    class="fa-solid fa-bars"
+    style="color: #6f6f6f; font-size: 1.5rem"
+    id="menu-icon"
+  ></i>
 
-    <nav class="navbar">
-        <a href="#">Mua Sắm</a>
-        <a href="#"><i class="fas fa-user-circle" style="font-size: 1.5rem"></i></a>
-        <a href="#"><i class="fas fa-shopping-bag" style="font-size: 1.5rem"></i></a>
-    </nav>
+  <nav class="navbar">
+    <a href="#">Mua Sắm</a>
+    <!-- Dropdown -->
+    <div class="dropdown">
+      <a
+        role="button"
+        id="dropdownMenuLink"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i class="fas fa-user-circle" style="font-size: 1.5rem"></i>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li>
+            <a class="dropdown-item" [routerLink]="['user/account']"
+              >Đăng nhập</a
+            >
+          </li>
+          <li><a class="dropdown-item" href="#">Đăng ký</a></li>
+        </ul>
+      </a>
+    </div>
+    <!--  -->
+    <a href="#"
+      ><i class="fas fa-shopping-bag" style="font-size: 1.5rem"></i
+    ></a>
+  </nav>
 </header>
 <div class="nav-bg"></div>
-
-
-
 <!-- Button cho mobile -->
 <script>
-  const menuIcon = document.querySelector('#menu-icon');
-  const navbar = document.querySelector('.navbar');
-  const navbg = document.querySelector('.nav-bg');
+  const menuIcon = document.querySelector("#menu-icon");
+  const navbar = document.querySelector(".navbar");
+  const navbg = document.querySelector(".nav-bg");
 
-  menuIcon.addEventListener('click', () => {
-    menuIcon.classList.toggle('fa-x');
-    navbar.classList.toggle('active');
-    navbg.classList.toggle('active');
+  menuIcon.addEventListener("click", () => {
+    menuIcon.classList.toggle("fa-x");
+    navbar.classList.toggle("active");
+    navbg.classList.toggle("active");
   });
 </script>
