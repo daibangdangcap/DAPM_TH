@@ -1,1 +1,11 @@
-<p>product works!</p>
+<div *ngFor="let item of listSP">
+  <p>{{item.tenSP}}</p>
+  <p>{{item.moTa[0]}}</p>
+  <p>{{item.moTa[1]}}</p>
+  <p>{{item.moTa[2]}}</p>
+  <p>{{item.loaiCa}}</p>
+  <p>{{item.trongLuong}}</p>
+  <p>{{item.soLuong}}</p>
+  <p>{{item.giaTien}}</p>
+  <img src="http://localhost:3800/ProductImages/{{item.hinhAnh[0].tenImageSP}}">
+</div>
