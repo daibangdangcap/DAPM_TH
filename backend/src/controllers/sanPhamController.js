@@ -5,4 +5,9 @@ var createNewSanPham=async(req,res)=>{
     res.send(createSP)
 }
 
-module.exports={createNewSanPham}
+var getAllSanPham=async(req,res)=>{
+    var listSP=await sanPhamService.getAllSanPham()
+    res.send(listSP)
+}
+
+module.exports={createNewSanPham,getAllSanPham}

@@ -28,4 +28,13 @@ var createNewSanPham=async(product)=>{
     })
     return productItem
 }
-module.exports={createNewSanPham}
+
+var getAllSanPham=async()=>{
+    var listSP=sanPhamModel.find({}).then(document=>{
+        return document;
+    })
+    return listSP;
+}
+
+
+module.exports={createNewSanPham,getAllSanPham}
