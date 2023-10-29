@@ -7,6 +7,5 @@ import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
-	images1 = ['../../../assets/images/bannerA1.png','../../../assets/images/bannerB1.png','../../../assets/images/OIP (2).jfif'];
-  images2=['../../../assets/images/bannerB1.png','../../../assets/images/bannerA1.png']
+	images1 = ['../../../assets/images/client/homepage/bannerA1.png','../../../assets/images/client/homepage/bannerB1.png','../../../assets/images/client/homepage/OIP (2).jfif'];
 }

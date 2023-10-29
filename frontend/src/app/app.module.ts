@@ -13,6 +13,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductDetailComponent } from './client/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     UserPageComponent,
     LoginComponent,
     CatalogComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

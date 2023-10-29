@@ -1,3 +1,8 @@
+#logo{
+  width: 75px; 
+  image-rendering: optimizeQuality;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -10,6 +15,7 @@
   justify-content: space-between;
   backdrop-filter: blur(10px);
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  z-index: 1;
 }
 
 .container{

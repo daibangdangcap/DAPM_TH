@@ -1,7 +1,8 @@
-
+/* Quang Huy */
 .khung-1 {
   position: relative;
   width: 100%;
+/* Tiến Thành */
 }
 body{
   background: #FEFEFE;
@@ -28,19 +29,20 @@ body{
      color: #EAD1A5;
      text-align: center;
      margin-top: 1%;
+     font-size: 70px;
   }
 
 .tieudenho{
   font-family: balloTamma;
   color: #5581A5;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   margin-top: 1%;
 }
 .noidungnho{
   color: #6F6F6F;
   text-align: center;
-  font-size: 20px;
+  font-size: 30px;
   margin-top: -15px;
   text-wrap:pretty;
   font-weight: 500;
@@ -59,7 +61,7 @@ body{
 .imageItem{
   height: 350px; width: 100%;
 }
-/* /*
+
 @media only screen and (max-width:900px){
   .item{
     height: fit-content;
@@ -77,6 +79,8 @@ body{
     height: 500px;
   }
 }
+
+/* Quang Huy */
 #background_image{
   background-image: url(/assets/Hompage/background_water.jpg);
   background-repeat: no-repeat;
@@ -100,6 +104,7 @@ body{
   transition: 0.2s;
   color: #316CB7;
   background: white;
+  font-size: 25px;
 
 }
 .khung-1 .bg-resize {
@@ -189,4 +194,4 @@ body{
 #img-size{
   width: 250px;
   height: 230px;
-} */
+} 

@@ -1,0 +1,99 @@
+body {
+  box-shadow: 0 0 0 100vmax #f6f4ec;
+}
+.con {
+  width: 100%;
+  padding: 0 50px 0 50px;
+  background: #f6f4ec;
+}
+/* CSS cho khung trai */
+.khung-trai {
+  width: 50%;
+  padding: 0 0 5vw 14vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.wrapper-img{
+  background: #FFF;
+  height: 20vw;
+  width: 28vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.img-change{
+  width: 20vw;
+}
+/* CSS CHO KHUNG PHAI */
+.khung-phai {
+  width: 50%;
+  padding: 0 30px;
+}
+.p-change-1 {
+  font-size: 2vw;
+  margin-bottom: 0px;
+}
+.bt-change {
+  border: none;
+  font-size: 2vw;
+  padding: 0vw;
+  background: #fbfbfb;
+}
+.wrapper {
+  display: flex;
+  width: 14vw;
+  min-width: 6vw;
+  align-items: center;
+  justify-content: center;
+  background: #fbfbfb;
+  border-radius: 12px;
+}
+.wrapper span {
+  width: 100%;
+  text-align: center;
+  font-size: 2vw;
+}
+.bt-change-2 {
+  border-radius: 20px;
+  background: #eee2cd;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 12vw;
+  height: 4vw;
+  font-size: 2vw;
+  color: #316cb7;
+  font-weight: 600;
+}
+.bt-change-3 {
+  font-size: 2vw;
+  width: 20vw;
+  height: 4vw;
+  border-radius: 20px;
+  background: #316cb7;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color:white;
+  font-weight: 600;
+}
+@media (max-width:1065px) {
+  .bt-change-2 {
+    font-size: 1.3vw;
+    transition: 0.3s;
+  }
+  .bt-change-3{
+    font-size:1.3vw;
+    transition: 0.3s;
+  }
+  @media (max-width:733px) {
+    .bt-change-2 {
+      font-size: 1vw;
+      transition: 0.3s;
+      width: 25vw;
+    }
+    .bt-change-3{
+      font-size:1vw;
+      transition: 0.3s;
+      width: 25vw;
+    }
+  }
+}
+
