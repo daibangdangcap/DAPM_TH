@@ -1,0 +1,29 @@
+<body>
+  <div class="con d-flex" style="margin-top: 10vw">
+    <!-- khung-trai -->
+    <div class="khung-trai">
+      <div class="wrapper-img">
+        <img class="img-change" src="/assets/product-detail/Ca_hoi.png" />
+      </div>
+    </div>
+    <!--khung-phai-->
+    <div class="khung-phai">
+      <p class="p-change-1 mb-2">Cá Lông Lia thia</p>
+      <p class="p-change-1 mb-2">Đơn giá: 15.000Đ</p>
+      <p class="p-change-1 mb-2">Tình trạng: Còn hàng</p>
+      <p class="p-change-1 mb-2">Đặc điểm nổi bật: Hay cắn nhau, sống riêng</p>
+      <div class="d-flex" style="">
+        <p class="p-change-1 me-5">Số lượng:</p>
+        <div class="wrapper">
+          <span class="bt-change" (click)="counter('minus')">-</span>
+          <p class="p-change-1" style="text-align: center">{{ count }}</p>
+          <span class="bt-change" (click)="counter('add')">+</span>
+        </div>
+      </div>
+      <div class="d-flex mt-4">
+        <button class="bt-change-2 me-5 ms-5">Mua Ngay!</button>
+        <button class="bt-change-3">Thêm vào giỏ hàng</button>
+      </div>
+    </div>
+  </div>
+</body>

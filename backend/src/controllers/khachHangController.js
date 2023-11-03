@@ -1,7 +1,11 @@
 var khachHangService=require('../services/khachHangService')
 
-var dangNhap=async(req)=>{
-    var user=khachHangService.dangNhap(req)
+var dangKy=async(req,res)=>{
+    var user=khachHangService.dangKy(req)
     res.send(user)
 }
-module.exports={dangNhap}
+var getVerify=(req,res)=>{
+    var verify=khachHangService.getVerify(req)
+}
+
+module.exports={dangKy, getVerify}

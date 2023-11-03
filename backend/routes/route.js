@@ -11,5 +11,7 @@ router.route('/sanpham/createNewSanPham').post(upload.upload.array('images',3),s
 router.route('/sanpham/getAllSanPham').get(sanPhamController.getAllSanPham) //lấy danh sách sản phẩm
 
 //KHÁCH HÀNG
-router.route('/khachhang/dangNhap').post(khachHangController.dangNhap)
+router.route('/khachhang/dangKy').post(khachHangController.dangKy)
+router.route('/khachhang/verify-email').get(khachHangController.getVerify)
+
 module.exports=router
