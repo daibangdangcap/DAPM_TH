@@ -10,4 +10,9 @@ var getAllSanPham=async(req,res)=>{
     res.send(listSP)
 }
 
-module.exports={createNewSanPham,getAllSanPham}
+var getDetailSanPham=async(req,res)=>{
+    var sp=await sanPhamService.getDetailSanPham(req.params.idProduct)
+    res.send(sp)
+}
+
+module.exports={createNewSanPham,getAllSanPham,getDetailSanPham}

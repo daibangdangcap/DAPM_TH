@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailComponent } from './client/product-detail/product-detail.component';
 import { HttpClientModule } from  '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { VerifyEmailComponent } from './client/login/verify-email/verify-email.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     CatalogComponent,
     CheckoutComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,

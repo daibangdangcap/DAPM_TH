@@ -37,4 +37,9 @@ var getAllSanPham=async()=>{
 }
 
 
-module.exports={createNewSanPham,getAllSanPham}
+var getDetailSanPham=async(idProduct)=>{
+    var sp=await sanPhamModel.findById(idProduct)
+    return sp
+}
+
+module.exports={createNewSanPham,getAllSanPham,getDetailSanPham}
