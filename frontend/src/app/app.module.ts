@@ -17,6 +17,7 @@ import { ProductDetailComponent } from './client/product-detail/product-detail.c
 import { HttpClientModule } from  '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { VerifyEmailComponent } from './client/login/verify-email/verify-email.component';
+import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { VerifyEmailComponent } from './client/login/verify-email/verify-email.c
     CatalogComponent,
     CheckoutComponent,
     ProductDetailComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    ClientLayoutComponent,
   ],
   imports: [
     BrowserModule,
