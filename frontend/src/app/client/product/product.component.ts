@@ -1,6 +1,7 @@
 import { route } from '../../route.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -10,19 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit{
   listSP:any[]=[]
-   API:string=''
-  constructor(public http:HttpClient, public route: route)
+  API:string=''
+  constructor(public http:HttpClient, public route: route, private router:Router)
   {
     this.API=route.getAPI()
   }
   getAllPro(){
-    this.http.get('http://localhost:3800'+'/sanpham/getAllSanPham').subscribe((data:any)=>{
+    this.http.get(this.API+'/sanpham/getAllSanPham').subscribe((data:any)=>{
       data.forEach((item:any)=>{
         this.listSP.push(item)
         console.log(item)
       })
     })
   }
+
+  changeToDetailPage(idSanPham){
+    this.router.navigate([`/product-detail`,idSanPham])
+  }
+
   ngOnInit(): void {
       this.getAllPro();
   }

@@ -13,8 +13,11 @@ import { CatalogComponent } from './client/catalog/catalog.component';
 import { CheckoutComponent } from './client/checkout/checkout.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductDetailComponent } from './client/product-detail/product-detail.component';
 import { HttpClientModule } from  '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { VerifyEmailComponent } from './client/login/verify-email/verify-email.component';
+import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { FormsModule } from '@angular/forms';
     UserPageComponent,
     LoginComponent,
     CatalogComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ProductDetailComponent,
+    VerifyEmailComponent,
+    ClientLayoutComponent,
   ],
   imports: [
     BrowserModule,

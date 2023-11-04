@@ -1,5 +1,5 @@
 #logo{
-  width: 75px; 
+  width: 75px;
   image-rendering: optimizeQuality;
 }
 
@@ -87,8 +87,8 @@
     display: block;
   }
   .navbar {
-    position: fixed;
-    top: 100%;
+    position: sticky;
+    top: 0;
     left: 0;
     width: 100%;
     padding: 0.5rem 4%;
