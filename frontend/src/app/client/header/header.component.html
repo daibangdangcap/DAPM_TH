@@ -39,6 +39,7 @@
         id="dropdownMenuLink"
         data-bs-toggle="dropdown"
         aria-expanded="false"
+        *ngIf="!isLoggedIn(); else loggedIn"
       >
         <i class="fas fa-user-circle" style="font-size: 1.5rem"></i>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -50,6 +51,14 @@
           <li><a class="dropdown-item" href="#">Đăng ký</a></li>
         </ul>
       </a>
+      <ng-template #loggedIn>
+        <a>
+          <img
+            src="assets/Login/avatar.png"
+            style="height: auto; width: 35px; border-radius: 50px"
+          />
+        </a>
+      </ng-template>
     </div>
     <!--  -->
     <a href="#"
