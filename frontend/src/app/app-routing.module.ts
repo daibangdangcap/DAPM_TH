@@ -7,6 +7,7 @@ import { VerifyEmailComponent } from './client/login/verify-email/verify-email.c
 import { ProductDetailComponent } from './client/product-detail/product-detail.component';
 import { VerifyNotiComponent } from './client/login/verify-noti/verify-noti.component';
 import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
+import { UserPageComponent } from './client/user-page/user-page.component';
 
 const routes: Routes = [
   // CLIENT
@@ -17,10 +18,11 @@ const routes: Routes = [
   { path : '', redirectTo:'/HomePage', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
   { path: 'HomePage', component: HomepageComponent },
-  { path :'user/account', component: LoginComponent},
+  { path: 'user/account', component: LoginComponent},
   { path: 'product',component:ProductComponent},
   { path: 'verify-email/:token',component:VerifyEmailComponent},
   { path: 'product-detail/:idProduct',component: ProductDetailComponent},
+  { path: 'user', component: UserPageComponent}
     ]
 },
   //NO

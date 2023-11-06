@@ -66,13 +66,14 @@
     <div class="d-flex justify-content-start" id="font-muasam">Mua Sắm</div>
     <p></p>
     <div class="row d-flex justify-content-between align-items-center h-100">
-      <div
-        id="khung-item"
-        *ngFor="let item of listSP | slice:12:1"
-      >
-        <img src ="http://localhost:3800/ProductImages/{{item.hinhAnh[0].tenImageSP}}"  />
-        <p id="font-name">{{item.tenSP}}</p>
-        <p id="font-gia">{{item.giaTien}}VND</p>
+      <div id="khung-item" *ngFor="let item of listSP | slice : 12 : 15">
+        <img
+          src="http://localhost:3800/ProductImages/{{
+            item.hinhAnh[0].tenImageSP
+          }}"
+        />
+        <p id="font-name">{{ item.tenSP }}</p>
+        <p id="font-gia">{{ item.giaTien }}VND</p>
       </div>
     </div>
   </div>
