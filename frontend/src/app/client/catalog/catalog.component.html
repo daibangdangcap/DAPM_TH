@@ -1,1 +1,35 @@
-<p>catalog works!</p>
+<body>
+<div class="row align-items-center ps-5 pt-3">
+    <div class="col-sm-4">
+        <h3>CÁC LOẠI CÁ</h3>
+        <hr/>
+        <ul class ="p-0 m-0">
+            <li><a (click)="showImage(1); onClickItem(0)" [ngClass]="activeIndex === 0 ? 'selectedItem' : 'unseletedItem'">Biển Ấn Độ Dương</a></li>
+            <li><a (click)="showImage(2); onClickItem(1)" [ngClass]="activeIndex === 1 ? 'selectedItem' : 'unseletedItem'">Biển Thái Bình Dương</a></li>
+            <li><a (click)="showImage(3); onClickItem(2)" [ngClass]="activeIndex === 2 ? 'selectedItem' : 'unseletedItem'">Biển Bắc Băng Dương</a></li>
+            <li><a (click)="showImage(4); onClickItem(3)" [ngClass]="activeIndex === 3 ? 'selectedItem' : 'unseletedItem'">Biển Nam Đại Dương</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-8" *ngIf="selectedImage">
+            <img [src]="selectedImage" class="images">
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row row-cols-3 d-flex justify-content-end" style ="padding-left:12%;">
+        <div class="col py-3" *ngFor="let item of listSP">
+            <div class="card" style="width: 15rem; border-radius: 20px 20px 0px 0px; border: 1px solid #000;">
+                <img src="http://localhost:3800/ProductImages/{{item.hinhAnh[0].tenImageSP}}" class="card-img-top p-2">
+                <hr class="pt-2"/>
+                <div class="card-body">
+                    <h5 class="card-title">{{item.tenSP}}</h5>
+                    <div class="d-flex">
+                        <p class="card-text">{{item.giaTien}}</p>
+                        <span><a href="#" (click)="changeToDetailPage(item._id)" class="btn mx-5">Mua</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
