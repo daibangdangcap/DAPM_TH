@@ -15,4 +15,9 @@ var getDetailSanPham=async(req,res)=>{
     res.send(sp)
 }
 
-module.exports={createNewSanPham,getAllSanPham,getDetailSanPham}
+var getSPFromOcean=async(req,res)=>{
+    var sp=await sanPhamService.getSPFromOcean(req)
+    res.send(sp)
+}
+
+module.exports={createNewSanPham,getAllSanPham,getDetailSanPham,getSPFromOcean}
