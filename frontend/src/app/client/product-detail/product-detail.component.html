@@ -39,90 +39,27 @@
 
       <div class="slider">
         <div class="slider-main">
-          <div class="item">
-            <div class="card mb-3">
-              <img
-                src="http://localhost:3800/ProductImages/{{ pro.tenImageSP }}"
-                class="proimage card-img-top p-2"
-              />
-              <div class="card-body">
-                <h5 class="card-title fs-3">{{ pro.tenSP }}</h5>
-                <div class="col d-flex justify-content-between">
-                  <p class="card-text fs-5">
-                    {{ pro.giaTien | currency : "VND" : " " }}Đ
-                  </p>
+          <div class="item" *ngFor="let list of listSP">
+            <span href="#" (click)="changeToDetailPage(list._id)">
+              <div class="card mb-3">
+                <img
+                  src="http://localhost:3800/ProductImages/{{
+                    list.hinhAnh[0].tenImageSP
+                  }}"
+                  class="proimage card-img-top p-2"
+                />
+                <div class="card-body">
+                  <h5 class="card-title fs-3">{{ list.tenSP }}</h5>
+                  <div class="col d-flex justify-content-between">
+                    <p class="card-text fs-5">
+                      {{ pro.giaTien | currency : "VND" : " " }}Đ
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="card mb-3">
-              <img
-                src="http://localhost:3800/ProductImages/{{ pro.tenImageSP }}"
-                class="proimage card-img-top p-2"
-              />
-              <div class="card-body">
-                <h5 class="card-title fs-3">{{ pro.tenSP }}</h5>
-                <div class="col d-flex justify-content-between">
-                  <p class="card-text fs-5">
-                    {{ pro.giaTien | currency : "VND" : " " }}Đ
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="card mb-3">
-              <img
-                src="http://localhost:3800/ProductImages/{{ pro.tenImageSP }}"
-                class="proimage card-img-top p-2"
-              />
-              <div class="card-body">
-                <h5 class="card-title fs-3">{{ pro.tenSP }}</h5>
-                <div class="col d-flex justify-content-between">
-                  <p class="card-text fs-5">
-                    {{ pro.giaTien | currency : "VND" : " " }}Đ
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="card mb-3">
-              <img
-                src="http://localhost:3800/ProductImages/{{ pro.tenImageSP }}"
-                class="proimage card-img-top p-2"
-              />
-              <div class="card-body">
-                <h5 class="card-title fs-3">{{ pro.tenSP }}</h5>
-                <div class="col d-flex justify-content-between">
-                  <p class="card-text fs-5">
-                    {{ pro.giaTien | currency : "VND" : " " }}Đ
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="card mb-3">
-              <img
-                src="http://localhost:3800/ProductImages/{{ pro.tenImageSP }}"
-                class="proimage card-img-top p-2"
-              />
-              <div class="card-body">
-                <h5 class="card-title fs-3">{{ pro.tenSP }}</h5>
-                <div class="col d-flex justify-content-between">
-                  <p class="card-text fs-5">
-                    {{ pro.giaTien | currency : "VND" : " " }}Đ
-                  </p>
-                </div>
-              </div>
-            </div>
+              </div></span
+            >
           </div>
         </div>
-
         <div>
           <button type="button" class="back" appBack>
             <i class="fa-solid fa-chevron-left" style="color: #000000"></i>

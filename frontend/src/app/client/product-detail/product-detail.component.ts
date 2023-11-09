@@ -1,23 +1,22 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Route } from '@angular/router';
-import { route } from 'src/app/route.service';
 import { API } from 'src/app/services/API.service';
 import { product } from 'src/app/services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css'],
-  providers:[API, product, route]
+  providers:[API, product]
 })
 export class ProductDetailComponent implements OnInit{
   pro:product=new product() 
    listSP:any[]=[]
   idProduct:string=''
-  API:string=''
 
-  constructor(private http:HttpClient,private route:ActivatedRoute, private api:API ){  }
+  constructor(private http:HttpClient,private route:ActivatedRoute, private api:API, private router:Router ){  }
   count=0;
   counter(type:string){
     if(type === 'add'){
@@ -28,7 +27,7 @@ export class ProductDetailComponent implements OnInit{
     }
   }
   getAllPro(){
-    this.http.get(this.api+'/sanpham/getAllSanPham').subscribe((data:any)=>{
+    this.http.get(this.api.getAPI()+'sanpham/getAllSanPham').subscribe((data:any)=>{
       data.forEach((item:any)=>{
         this.listSP.push(item)
         console.log(item)
@@ -51,14 +50,17 @@ export class ProductDetailComponent implements OnInit{
       this.pro.idPro=data._id
     })
   }
-
-
+  changeToDetailPage(id){
+    this.router.navigate([`/product-detail`,id]);
+    this.pro.idPro = id;
+    this.getDetailProduct();
+  }
 
   ngOnInit(): void {
-    this.getAllPro();
     this.route.paramMap.subscribe((params)=>{
       this.pro.idPro=params.get('idProduct')
     })
-    this.getDetailProduct()
+    this.getDetailProduct();
+    this.getAllPro();
   }
 }
