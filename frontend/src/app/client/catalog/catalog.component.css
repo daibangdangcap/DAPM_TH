@@ -40,6 +40,18 @@ color:#1C1B1F;
     margin-bottom: 32px;
 }
 
+.card{
+    border-radius: 25px;
+}
+.card-body{
+    border-top: 1px solid rgb(190, 196, 190);
+}
+.proimage{
+    width:250px;
+    height:250px;
+    max-width: 100%;
+    max-height: 100%;
+}
 
 .btn {
     font-size: 18px;
