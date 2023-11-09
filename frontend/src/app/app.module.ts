@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailComponent } from './client/product-detail/product-detail.component';
 import { PurchaseComponent } from './client/purchase/purchase.component';
+import { PurchaseNoticeComponent } from './client/purchase-notice/purchase-notice.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PurchaseComponent } from './client/purchase/purchase.component';
     CatalogComponent,
     CheckoutComponent,
     ProductDetailComponent,
-    PurchaseComponent
+    PurchaseComponent,
+    PurchaseNoticeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,47 @@
+body {
+  position: relative;
+}
+.img-resize {
+  width: 100%;
+}
+.con-notice {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 45%;
+  border-radius: 15px;
+  background: #f6f4ec;
+  padding-top: 30px;
+}
+p {
+  margin: 0;
+}
+.p-change-1 {
+  color: #4e4c4c;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 35px;
+  font-weight: 600;
+  padding-top: 30px;
+}
+.p-change-2 {
+  color: #4e4c4c;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 1.3vw;
+  font-weight: 400;
+}
+.img-resize-2 {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    -2px 4px 6px 0px rgba(255, 255, 255, 0.25) inset;
+  width: 100px;
+  height: 100px;
+  margin-left: 30px;
+}
+@font-face {
+  font-family: Inter;
+  src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
