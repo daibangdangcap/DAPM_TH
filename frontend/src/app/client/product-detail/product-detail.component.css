@@ -1,38 +1,35 @@
 body {
   box-shadow: 0 0 0 100vmax #f6f4ec;
+  background: #f6f4ec;
 }
 .con {
   width: 100%;
-  padding: 0 50px 0 50px;
-  background: #f6f4ec;
+  padding: 50px;
 }
 /* CSS cho khung trai */
 .khung-trai {
   width: 50%;
-  padding: 0 0 5vw 14vw;
   justify-content: center;
-  align-items: center;
+  padding-top: 20px;
   display: flex;
 }
-.wrapper-img{
-  background: #FFF;
-  height: 20vw;
-  width: 28vw;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.img-change{
-  width: 20vw;
+.img-change {
+  width: 400px;
+  height: 350px;
+  background: #fff;
+  padding: 20px;
+  max-width: 100%;
 }
 /* CSS CHO KHUNG PHAI */
 .khung-phai {
   width: 50%;
-  padding: 0 30px;
 }
-.p-change-1 {
-  font-size: 2vw;
-  margin-bottom: 0px;
+.title {
+  font-size: 40px;
+  font-weight: 600;
+}
+.content {
+  font-size: 30px;
 }
 .bt-change {
   border: none;
@@ -44,7 +41,6 @@ body {
   display: flex;
   width: 14vw;
   min-width: 6vw;
-  align-items: center;
   justify-content: center;
   background: #fbfbfb;
   border-radius: 12px;
@@ -71,7 +67,66 @@ body {
   border-radius: 20px;
   background: #316cb7;
   box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color:white;
+  color: white;
   font-weight: 600;
 }
-
+hr {
+  margin: auto;
+  width: 70%;
+  height: 2px;
+  background: rgba(70, 70, 70, 0.8);
+  margin-bottom: 20px;
+}
+/* SLIDER */
+.container-fluid {
+  background-image: url(/assets/Hompage/background_khung_muasam.png);
+}
+.boxtitle {
+  color: #316cb7;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  margin-top: 30px;
+}
+.slider-main {
+  position: absolute;
+  width: 200%;
+}
+.item {
+  display: inline-block;
+  width: 300px;
+  height: 250px;
+  background: red;
+  margin-right: 50px;
+  margin-left: 55px;
+  position: relative;
+}
+.card {
+  border-radius: 25px;
+}
+.card-body {
+  border-top: 1px solid rgb(190, 196, 190);
+}
+button {
+  border-radius: 50%;
+  border:none;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+}
+.back {
+  position: absolute;
+  left: 0;
+  top: 40%;
+}
+.next {
+  position: absolute;
+  right: 0;
+  top: 40%;
+}
