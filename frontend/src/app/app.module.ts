@@ -18,6 +18,8 @@ import { HttpClientModule } from  '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { VerifyEmailComponent } from './client/login/verify-email/verify-email.component';
 import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
+import { NextDirective } from './directive/next.directive';
+import { BackDirective } from './directive/back.directive';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { ClientLayoutComponent } from './client/client-layout/client-layout.comp
     ProductDetailComponent,
     VerifyEmailComponent,
     ClientLayoutComponent,
+    NextDirective,
+    BackDirective,
   ],
   imports: [
     BrowserModule,
