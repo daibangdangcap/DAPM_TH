@@ -14,6 +14,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailComponent } from './client/product-detail/product-detail.component';
+import { PurchaseComponent } from './client/purchase/purchase.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProductDetailComponent } from './client/product-detail/product-detail.c
     LoginComponent,
     CatalogComponent,
     CheckoutComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    PurchaseComponent
   ],
   imports: [
     BrowserModule,
