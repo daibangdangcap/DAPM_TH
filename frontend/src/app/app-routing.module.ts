@@ -19,7 +19,7 @@ const routes: Routes = [
   { path : '', redirectTo:'/HomePage', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
   { path: 'HomePage', component: HomepageComponent },
-  { path :'user/account', component: LoginComponent},
+  { path: 'user/account', component: LoginComponent},
   { path: 'product',component:ProductComponent},
   { path: 'catalog', component: CatalogComponent},
   { path: 'verify-email/:token',component:VerifyEmailComponent},
