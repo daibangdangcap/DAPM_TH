@@ -19,6 +19,8 @@ import { FormsModule } from '@angular/forms';
 import { VerifyEmailComponent } from './client/login/verify-email/verify-email.component';
 import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
 import { PurchaseComponent } from './client/purchase/purchase.component';
+import { NextDirective } from './directive/next.directive';
+import { BackDirective } from './directive/back.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { PurchaseComponent } from './client/purchase/purchase.component';
     VerifyEmailComponent,
     ClientLayoutComponent,
     ProductDetailComponent,
-    PurchaseComponent
+    PurchaseComponent,
+    NextDirective,
+    BackDirective,
   ],
   imports: [
     BrowserModule,
