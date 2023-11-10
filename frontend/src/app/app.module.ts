@@ -20,6 +20,7 @@ import { VerifyEmailComponent } from './client/login/verify-email/verify-email.c
 import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
 import { CartListComponent } from './client/cart-list/cart-list.component';
 import { PurchaseComponent } from './client/purchase/purchase.component';
+import { PurchaseNoticeComponent } from './client/purchase-notice/purchase-notice.component';
 import { NextDirective } from './directive/next.directive';
 import { BackDirective } from './directive/back.directive';
 
@@ -45,6 +46,7 @@ import { BackDirective } from './directive/back.directive';
     CartListComponent,
     NextDirective,
     BackDirective,
+    PurchaseNoticeComponent
   ],
   imports: [
     BrowserModule,

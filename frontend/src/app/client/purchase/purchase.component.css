@@ -84,8 +84,7 @@ input[type="radio"]:checked {
   height: 10vh;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.4);
-  box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    -2px 4px 6px 0px rgba(255, 255, 255, 0.25) inset;
+  box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.25),-2px 4px 6px 0px rgba(255, 255, 255, 0.25) inset;
 }
 .p-change-2 {
   color: #f6f4ec;
@@ -105,6 +104,29 @@ input[type="radio"]:checked {
   font-family: "Inter";
   margin-top: 10vh;
 }
+.scrollbar{
+  overflow: auto;
+  height: 15vh;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 /*chỉnh sửa thẻ p*/
 p {
   margin: 0px;
@@ -114,7 +136,7 @@ p {
   font-family: Inter;
   src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
 }
-@media (max-width: 1300px) {
+@media (max-width: 1399px) {
   body{
     margin-top: 10vw;
   }
@@ -150,8 +172,11 @@ p {
   .img-change{
     height: 9vh;
   }
+  .scrollbar{
+    height: 12vh;
+  }
 }
-@media (max-width: 1080px) {
+@media (max-width: 1113px) {
   body{
     margin-top: 14vw;
   }
@@ -183,6 +208,9 @@ p {
     height: 5vh;
     margin-top: 6vh;
     font-size: 1.5vw;
+  }
+  .scrollbar{
+    height: 7vh;
   }
 }
 @media (max-width: 950px) {
@@ -258,6 +286,9 @@ p {
   }
   .img-change{
     width: 6vw;
+    height: 5vh;
+  }
+  .scrollbar{
     height: 5vh;
   }
 }
