@@ -14,14 +14,16 @@ export class AuthService {
   }
 
   setUser(user:any){
-    this,user=user
+    this.user=user
     localStorage.setItem('user',JSON.stringify(this.user))
   }
 
-  LogIn(){
+  LogIn(user:any){
     this.isLoggedIn = true;
+    this.setUser(user)
   }
   LogOut(){
+    localStorage.removeItem('user')
     this.isLoggedIn = false;
   }
 }

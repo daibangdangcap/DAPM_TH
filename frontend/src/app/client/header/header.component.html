@@ -31,7 +31,7 @@
   ></i>
 
   <nav class="navbar">
-    <a href="#">Mua Sắm</a>
+    <a [routerLink]="['/catalog']">Mua Sắm</a>
     <!-- Dropdown -->
     <div class="dropdown">
       <a
@@ -39,7 +39,7 @@
         id="dropdownMenuLink"
         data-bs-toggle="dropdown"
         aria-expanded="false"
-        *ngIf="isLoggedIn(); else loggedIn"
+        *ngIf="!isLoggedIn(); else loggedIn"
       >
         <i class="fas fa-user-circle" style="font-size: 1.5rem"></i>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -48,11 +48,11 @@
               >Đăng nhập</a
             >
           </li>
-          <li><a class="dropdown-item" href="#">Đăng ký</a></li>
+          <li><a class="dropdown-item">Đăng ký</a></li>
         </ul>
       </a>
       <ng-template #loggedIn>
-        <a>
+        <a [routerLink]="['/userpage']">
           <img
             src="assets/Login/avatar.png"
             style="height: auto; width: 35px; border-radius: 50px"
@@ -61,7 +61,7 @@
       </ng-template>
     </div>
     <!--  -->
-    <a href="#"
+    <a [routerLink]="['/cart']"
       ><i class="fas fa-shopping-bag" style="font-size: 1.5rem"></i
     ></a>
   </nav>

@@ -9,6 +9,8 @@ import { VerifyNotiComponent } from './client/login/verify-noti/verify-noti.comp
 import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
 import { CatalogComponent } from './client/catalog/catalog.component';
 import { UserPageComponent } from './client/user-page/user-page.component';
+import { CartListComponent } from './client/cart-list/cart-list.component';
+import { PurchaseComponent } from './client/purchase/purchase.component';
 
 const routes: Routes = [
   // CLIENT
@@ -24,11 +26,13 @@ const routes: Routes = [
   { path: 'catalog', component: CatalogComponent},
   { path: 'verify-email/:token',component:VerifyEmailComponent},
   { path: 'product-detail/:idProduct',component: ProductDetailComponent},
-  { path: 'userpage', component: UserPageComponent}
+  { path: 'userpage', component: UserPageComponent},
+  { path: 'cart', component: CartListComponent},
     ]
 },
   //NO
-  {path: 'emailAuth', component:VerifyNotiComponent}
+  {path: 'emailAuth', component:VerifyNotiComponent},
+  { path: 'purchase', component: PurchaseComponent}
 ];
 
 @NgModule({

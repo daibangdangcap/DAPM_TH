@@ -1,10 +1,6 @@
 var mongoose=require('mongoose')
 var Schema= mongoose.Schema
 var donHangSchema=new Schema({
-    idKH: {type:mongoose.Schema.Types.ObjectId,ref:'KHACHHANG'},
-    cacDH: {type: [
-        {
-            idDonHang: {type:String},
             ngayDat: {
                 type:Date,
                 default: Date.now
@@ -18,7 +14,5 @@ var donHangSchema=new Schema({
                     thanhTien: {type: Number}
                 }
             ]}
-        }
-    ]}
 },{collection:'DONHANG'})
 module.exports=mongoose.model('DONHANG',donHangSchema)

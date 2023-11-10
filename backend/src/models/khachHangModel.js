@@ -5,6 +5,7 @@ var khachHangSchema=new Schema({
     email:{type: String},
     sdt:{type:String},
     matKhau: {type: String},
-    verified:{type: Boolean}
+    verified:{type: Boolean},
+    cacDonHang:[{type:mongoose.Schema.Types.ObjectId,ref:'DONHANG'}]
 },{collection:'KHACHHANG'})
 module.exports=mongoose.model('KHACHHANG',khachHangSchema)

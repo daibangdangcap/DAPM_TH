@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Route } from '@angular/router';
 import { API } from 'src/app/services/API.service';
+import { cartItem } from 'src/app/services/cart-item/cartItem.service';
+import { CartListService } from 'src/app/services/cart-list/cart-list.service';
 import { product } from 'src/app/services/product.service';
 import { Router } from '@angular/router';
 
@@ -9,20 +11,22 @@ import { Router } from '@angular/router';
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css'],
-  providers:[API, product]
+  providers:[API, product, cartItem]
 })
 export class ProductDetailComponent implements OnInit{
-  pro:product=new product() 
-   listSP:any[]=[]
+  listSP:any[]=[]
+  itemCart:cartItem=new cartItem()
+  pro:product=new product()
   idProduct:string=''
+  constructor(private http:HttpClient,private route:ActivatedRoute, private api:API, private cartlist: CartListService, private router:Router){}
 
-  constructor(private http:HttpClient,private route:ActivatedRoute, private api:API, private router:Router ){  }
-  count=0;
+
+  count=1;
   counter(type:string){
-    if(type === 'add'){
+    if(type === 'add'&&this.count<this.pro.soLuong){
       this.count++
     }
-    else if(type==='minus' && this.count >0){
+    else if(type==='minus' && this.count >1){
       this.count--
     }
   }
@@ -62,5 +66,17 @@ export class ProductDetailComponent implements OnInit{
     })
     this.getDetailProduct();
     this.getAllPro();
+  }
+
+  addToCartList(){
+    this.itemCart.id=this.pro.idPro
+    this.itemCart.hinhAnh=this.pro.tenImageSP
+    this.itemCart.tenSP=this.pro.tenSP
+    this.itemCart.giaTien=this.pro.giaTien
+    this.itemCart.soLuongHienCo=this.pro.soLuong-this.count
+    this.itemCart.soLuongMua=this.count
+    this.itemCart.thanhTien=this.itemCart.soLuongMua*this.itemCart.giaTien
+    this.cartlist.addItemIntoList(this.itemCart)
+    console.log("thêm thành công")
   }
 }
