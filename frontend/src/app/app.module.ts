@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailComponent } from './client/product-detail/product-detail.component';
 import { PurchaseComponent } from './client/purchase/purchase.component';
 import { PurchaseNoticeComponent } from './client/purchase-notice/purchase-notice.component';
+import { ShoppingCartComponent } from './client/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PurchaseNoticeComponent } from './client/purchase-notice/purchase-notic
     CheckoutComponent,
     ProductDetailComponent,
     PurchaseComponent,
-    PurchaseNoticeComponent
+    PurchaseNoticeComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
