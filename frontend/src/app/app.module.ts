@@ -18,11 +18,12 @@ import { HttpClientModule } from  '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { VerifyEmailComponent } from './client/login/verify-email/verify-email.component';
 import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
-import { CartListComponent } from './client/cart-list/cart-list.component';
+import { CartListComponent } from './cart-list/cart-list.component';
 import { PurchaseComponent } from './client/purchase/purchase.component';
 import { PurchaseNoticeComponent } from './client/purchase-notice/purchase-notice.component';
 import { NextDirective } from './directive/next.directive';
 import { BackDirective } from './directive/back.directive';
+import { CartHistoryComponent } from './client/cart-history/cart-history.component';
 
 @NgModule({
   declarations: [
@@ -42,10 +43,10 @@ import { BackDirective } from './directive/back.directive';
     ClientLayoutComponent,
     ProductDetailComponent,
     PurchaseComponent,
-    PurchaseComponent,
     CartListComponent,
     NextDirective,
     BackDirective,
+    CartHistoryComponent,
     PurchaseNoticeComponent
   ],
   imports: [

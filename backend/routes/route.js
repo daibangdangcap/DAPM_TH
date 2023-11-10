@@ -18,5 +18,8 @@ router.route('/khachhang/verify-email/:token').get(khachHangController.getVerify
 router.route('/khachhang/dangNhap').post(khachHangController.dangNhap)// đăng nhập tài khoản
 
 //ĐƠN HÀNG
-router.route('/donHang/buyDonHang').post(donHangController.buyDonHang)
+router.route('/donHang/buyDonHang').post(donHangController.buyDonHang) //mua hàng
+router.route('/donHang/danhSachDonHang/:iduser').get(donHangController.danhSachDonHang) //danh sách đơn hàng của người dùng
+
+
 module.exports=router

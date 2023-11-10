@@ -5,4 +5,10 @@ var buyDonHang=async(req,res)=>{
     res.send(donHang)
 }
 
-module.exports={buyDonHang}
+var danhSachDonHang=async(req,res)=>{
+    var listOrder=await donHangService.danhSachDonHang(req)
+    console.log(listOrder)
+    res.send(listOrder)
+}
+
+module.exports={buyDonHang,danhSachDonHang}

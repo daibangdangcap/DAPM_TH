@@ -17,8 +17,13 @@ var buyDonHang=async(req)=>{
         })
     })
     var donHang=new donHangModel({
+        nameUser:req.body.inform.nameUser,
+        emailAddress:req.body.inform.email,
+        sdt:req.body.inform.sdt,
+        addressDelivery:req.body.inform.addressDelivery,
         tongSLMua:tongSL,
         tongTien:tongTien,
+        phuongThucTT:req.body.inform.phuongThucTT,
         CTDH:listSP
     })
     donHang.save().then(document=>{
@@ -34,4 +39,21 @@ var buyDonHang=async(req)=>{
 }
 
 
-module.exports={buyDonHang}
+var danhSachDonHang=async(req)=>{
+    listOrderID=[]
+    listOrderItem=[]
+    var findOrderID=khachHangModel.findById(req.params.iduser).then(document=>{
+        return document.cacDonHang
+    })
+    listOrderID=await findOrderID
+    listOrderItem=await listOrderID.map(async item=>{
+        var findOrderItem=await donHangModel.findById(item).then( document=>{
+            return document
+        })
+        return findOrderItem
+    })
+    listOrderItemA= await Promise.all(listOrderItem)
+    return listOrderItemA
+}
+
+module.exports={buyDonHang, danhSachDonHang}
