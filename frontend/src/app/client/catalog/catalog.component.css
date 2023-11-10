@@ -1,0 +1,71 @@
+@font-face {
+    font-family: balloTamma;
+    src: url(../../../assets/fonts/Baloo-Regular.ttf);
+}
+body{
+    background-color: #F6F4EC;
+}
+
+h3{
+    color: #316CB7;
+    font-size: 40px;
+    font-weight: 400;
+    font-family: "balloTamma";
+}
+ul li{
+    list-style: none;
+    text-decoration: none;
+}
+li a{
+    margin-bottom: 16px;
+    font-size: 30px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.selectedItem{
+    color: #D9673A;
+    margin-bottom: 16px;
+    font-size: 30px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.unseletedItem{
+color:#1C1B1F;
+}
+
+.images{
+    width: 900px;
+    height: 500px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+}
+
+.card{
+    border-radius: 25px;
+}
+.card-body{
+    border-top: 1px solid rgb(190, 196, 190);
+}
+.proimage{
+    width:250px;
+    height:250px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.btn {
+    font-size: 18px;
+    background: #437ac3;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #F6F4EC;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover {
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, .5);
+    background: #437ac3;
+    color: rgb(191, 212, 240);
+}
