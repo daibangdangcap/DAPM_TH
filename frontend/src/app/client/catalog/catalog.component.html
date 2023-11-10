@@ -1,1 +1,36 @@
-<p>catalog works!</p>
+<body>
+<div class="row align-items-center ps-5 pt-3">
+    <div class="col-sm-4">
+        <h3>CÁC LOẠI CÁ</h3>
+        <hr/>
+        <ul class ="p-0 m-0">
+            <li><a (click)="showImage(1); onClickItem(0)" [ngClass]="activeIndex === 0 ? 'selectedItem' : 'unseletedItem'">Biển Ấn Độ Dương</a></li>
+            <li><a (click)="showImage(2); onClickItem(1)" [ngClass]="activeIndex === 1 ? 'selectedItem' : 'unseletedItem'">Biển Thái Bình Dương</a></li>
+            <li><a (click)="showImage(3); onClickItem(2)" [ngClass]="activeIndex === 2 ? 'selectedItem' : 'unseletedItem'">Biển Bắc Băng Dương</a></li>
+            <li><a (click)="showImage(4); onClickItem(3)" [ngClass]="activeIndex === 3 ? 'selectedItem' : 'unseletedItem'">Biển Nam Đại Dương</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-8" *ngIf="selectedImage">
+            <img [src]="selectedImage" class="images">
+    </div>
+</div>
+
+<div class="container" style="width: 100%; height: auto">
+    <div class="row row-cols-3">
+        <div class="col justify-content-center d-flex" *ngFor="let item of listSP">
+            <div class="card mb-3">
+                <img src="http://localhost:3800/ProductImages/{{ item.hinhAnh[0].tenImageSP }}" class="proimage card-img-top p-2"/>
+                <div class="card-body">
+                    <h5 class="card-title fs-3">{{ item.tenSP }}</h5>
+                    <div class="col d-flex justify-content-between">
+                        <p class="card-text fs-5">
+                            {{ item.giaTien | currency : "VND" : " " }}Đ
+                        </p>
+                        <span><a href="#" (click)="changeToDetailPage(item._id)" class="btn">Mua</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

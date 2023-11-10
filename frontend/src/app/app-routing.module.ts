@@ -8,6 +8,7 @@ import { ProductDetailComponent } from './client/product-detail/product-detail.c
 import { VerifyNotiComponent } from './client/login/verify-noti/verify-noti.component';
 import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
 import { UserPageComponent } from './client/user-page/user-page.component';
+import { CatalogComponent } from './client/catalog/catalog.component';
 
 const routes: Routes = [
   // CLIENT
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'HomePage', component: HomepageComponent },
   { path: 'user/account', component: LoginComponent},
   { path: 'product',component:ProductComponent},
+  {path: 'Catalog', component: CatalogComponent},
   { path: 'verify-email/:token',component:VerifyEmailComponent},
   { path: 'product-detail/:idProduct',component: ProductDetailComponent},
   { path: 'user', component: UserPageComponent}

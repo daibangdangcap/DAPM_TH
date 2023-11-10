@@ -14,7 +14,7 @@
         Đơn giá: {{ pro.giaTien | currency : "VND" : "" }}Đ
       </p>
       <p class="content p-change-1 mb-2">Tình trạng: Còn hàng</p>
-      <p class="content p-change-1 mb-2">Đặc điểm nổi bật: {{ pro.moTa }}</p>
+      <p class="content p-change-1 mb-2">Đặc điểm nổi bật: {{ pro.moTa[0] }}</p>
       <div class="d-flex">
         <p class="content p-change-1 me-5">Số lượng:</p>
         <div class="wrapper">
@@ -52,7 +52,7 @@
                   <h5 class="card-title fs-3">{{ list.tenSP }}</h5>
                   <div class="col d-flex justify-content-between">
                     <p class="card-text fs-5">
-                      {{ pro.giaTien | currency : "VND" : " " }}Đ
+                      {{ list.giaTien | currency : "VND" : " " }}Đ
                     </p>
                   </div>
                 </div>
