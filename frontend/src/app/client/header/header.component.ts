@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { CartListService } from 'src/app/services/cart-list/cart-list.service';
@@ -10,7 +11,7 @@ import { CartListService } from 'src/app/services/cart-list/cart-list.service';
 export class HeaderComponent implements OnInit{
   user:any
   slcart:number
-  constructor(private AuthService: AuthService, private cartService: CartListService)
+  constructor(private AuthService: AuthService, private cartService: CartListService, private http: HttpClient)
   {  }
   isLoggedIn(){
     this.getUser()
@@ -27,4 +28,5 @@ export class HeaderComponent implements OnInit{
       this.getUser()
       this.countSL()
     }
+
 }

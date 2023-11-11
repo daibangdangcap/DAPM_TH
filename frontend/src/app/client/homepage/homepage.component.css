@@ -195,3 +195,62 @@ body{
   width: 250px;
   height: 230px;
 } 
+/* SLIDER */
+
+.container-fluid {
+  background-image: url(/assets/Hompage/background_khung_muasam.png);
+}
+.boxtitle {
+  color: #316cb7;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 450px;
+  margin-top: 30px;
+  margin-bottom:40px;
+}
+.slider-main {
+  position: absolute;
+  width: 200%;
+}
+.slider-main .item {
+  display: inline-block;
+  width: 300px;
+  height: 500px;
+  margin-right: 50px;
+  margin-left: 120px;
+  position: relative;
+}
+.card {
+  border-radius: 25px;
+}
+.proimage{
+  width:300px;
+  height:300px;
+}
+.card-body {
+  border-top: 1px solid rgb(190, 196, 190);
+}
+
+button {
+  border-radius: 50%;
+  border:none;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+}
+.back {
+  position: absolute;
+  left: 0;
+  top: 40%;
+}
+.next {
+  position: absolute;
+  right: 0;
+  top: 40%;
+}

@@ -36,7 +36,13 @@
             <form class="row g-4 fs-5">
               <div class="col-md-6">
                 <label for="name" class="form-label fw-bold">Họ và Tên: </label>
-                <input type="text" class="form-control" id="name" value="{{user.hoTen}}"/>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  value="{{ user.hoTen }}"
+                  readonly
+                />
               </div>
               <div class="col-md-6">
                 <label for="email" class="form-label fw-bold">Email: </label>
@@ -44,7 +50,8 @@
                   type="email"
                   class="form-control fw-bold"
                   id="inputPassword4"
-                  value=" {{user.email}}"
+                  value=" {{ user.email }}"
+                  readonly
                 />
               </div>
               <div class="col-3">
@@ -56,6 +63,7 @@
                   class="form-control"
                   id="Gender"
                   placeholder="Nam"
+                  readonly
                 />
               </div>
               <div class="col">
@@ -66,7 +74,8 @@
                   type="tel"
                   class="form-control"
                   id="address"
-                  value="{{user.sdt}}"
+                  value="{{ user.sdt }}"
+                  readonly
                 />
               </div>
               <div class="col-12">
@@ -76,6 +85,7 @@
                   class="form-control"
                   id="address"
                   placeholder="828 Su Van hanh"
+                  readonly
                 />
               </div>
             </form>

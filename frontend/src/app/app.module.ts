@@ -24,6 +24,7 @@ import { PurchaseNoticeComponent } from './client/purchase-notice/purchase-notic
 import { NextDirective } from './directive/next.directive';
 import { BackDirective } from './directive/back.directive';
 import { CartHistoryComponent } from './client/cart-history/cart-history.component';
+import { SearchpageComponent } from './client/searchpage/searchpage.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { CartHistoryComponent } from './client/cart-history/cart-history.compone
     NextDirective,
     BackDirective,
     CartHistoryComponent,
-    PurchaseNoticeComponent
+    PurchaseNoticeComponent,
+    SearchpageComponent
   ],
   imports: [
     BrowserModule,
