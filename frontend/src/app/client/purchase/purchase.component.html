@@ -1,0 +1,134 @@
+<body>
+  <!-- khung-trai -->
+  <div class="khung-trai">
+    <div>
+      <button class="fa fa-arrow-left btn-back" (click)="goBack()"></button>
+      <img class="logo" src="/assets/purchase/logo.png" alt="" />
+    </div>
+    <div class="ms-2 mt-3 p-change-1">
+      <p>Thông tin nhận hàng</p>
+    </div>
+    <div class="form-group text-center">
+      <input
+        class="input-change mb-2"
+        placeholder="Họ và tên người nhận"
+        type="text"
+        [(ngModel)]="inform.nameUser"
+        name="inform.nameUser"
+        required
+      />
+      <input
+        class="input-change mb-2"
+        placeholder="Địa chỉ email"
+        type="email"
+        [(ngModel)]="inform.email"
+        name="inform.email"
+        required
+      />
+      <input
+        class="input-change mb-2"
+        placeholder="Số điện thoại"
+        type="tel"
+        [(ngModel)]="inform.sdt"
+        name="inform.sdt"
+        required
+      />
+      <input
+        class="input-change"
+        placeholder="Địa chỉ giao hàng"
+        type="text"
+        [(ngModel)]="inform.addressDelivery"
+        name="inform.addressDelivery"
+        required
+      />
+    </div>
+    <div>
+      <hr class="hr-1" />
+    </div>
+    <div class="p-change-1">
+      <p>Phương thức thanh toán</p>
+    </div>
+    <div>
+      <input
+        class="radio-button"
+        type="radio"
+        [value]="true"
+        [(ngModel)]="phuongThucTT"
+        name="inform.phuongThucTT"
+        required
+      />
+      <span class="span-change">Tiền mặt</span>
+    </div>
+    <div>
+      <input
+        class="radio-button"
+        type="radio"
+        [value]="false"
+        [(ngModel)]="phuongThucTT"
+        name="inform.phuongThucTT"
+        required
+      />
+      <span class="span-change">Chuyển khoản</span><br />
+    </div>
+  </div>
+  <!-- Khung-phai -->
+  <div class="khung-phai">
+    <h1 class="h1-change">Đơn Hàng</h1>
+    <div class="align-items-center justify-content-center d-flex">
+      <hr class="hr-2" />
+    </div>
+    <div class="scrollbar">
+      <div *ngFor="let item of listSP">
+        <div class="align-items-center justify-content-center d-flex">
+          <div class="col-4">
+            <img
+              src="http://localhost:3800/ProductImages/{{ item.hinhAnh }}"
+              class="img-change"
+            />
+          </div>
+          <div class="col-4 text-center">
+            <p class="p-change-2">{{ item.tenSP }}</p>
+          </div>
+          <div class="col-4 text-center">
+            <p class="p-change-2">
+              {{ item.thanhTien | currency : "VND" : " " }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <hr class="hr-3" />
+    </div>
+    <div class="d-flex mb-3">
+      <div class="col-6 text-start">
+        <p class="p-change-2">Tạm tính:</p>
+      </div>
+      <div class="col-6 text-end">
+        <p class="p-change-2">{{ tongTien | currency : "VND" : " " }}</p>
+      </div>
+    </div>
+    <div class="d-flex mb-3">
+      <div class="col-6 text-start">
+        <p class="p-change-2">Phí giao hàng:</p>
+      </div>
+      <div class="col-6 text-end">
+        <p class="p-change-2">20,000</p>
+      </div>
+    </div>
+    <div class="d-flex">
+      <div class="col-6 text-start">
+        <p class="p-change-2">thành tiền:</p>
+      </div>
+      <div class="col-6 text-end">
+        <p class="p-change-2">
+          {{ tongTien + 20000 | currency : "VND" : " " }}
+        </p>
+      </div>
+    </div>
+    <div class="align-items-center justify-content-center d-flex">
+      <button class="button-change" (click)="buyCart()">Thanh Toán</button>
+    </div>
+  </div>
+</body>

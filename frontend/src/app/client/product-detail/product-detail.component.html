@@ -9,14 +9,19 @@
     </div>
     <!--khung-phai-->
     <div class="khung-phai">
-      <p class="title p-change-1 mb-2">{{ pro.tenSP }}</p>
+      <p class="p-change-1 mb-2">{{pro.tenSP}}</p>
       <p class="content p-change-1 mb-2">
         Đơn giá: {{ pro.giaTien | currency : "VND" : "" }}Đ
       </p>
       <p class="content p-change-1 mb-2">Tình trạng: Còn hàng</p>
-      <p class="content p-change-1 mb-2">Đặc điểm nổi bật: {{ pro.moTa[0] }}</p>
-      <div class="d-flex">
-        <p class="content p-change-1 me-5">Số lượng:</p>
+      <p class="p-change-1 mb-2">Số lượng: {{pro.soLuong}}</p>
+      <p class="p-change-1 mb-2">Trọng lượng: {{pro.trongLuong}}</p>
+      <p class="p-change-1 mb-2">Loại đại dương: {{pro.loaiCa}}</p>
+      <p class="p-change-1 mb-2">
+        Mô tả: {{pro.moTa}}
+      </p>
+      <div class="d-flex" style="">
+        <p class="p-change-1 me-5">Số lượng:</p>
         <div class="wrapper">
           <span class="bt-change" (click)="counter('minus')">-</span>
           <p class="fs-4 p-change-1">{{ count }}</p>
@@ -25,7 +30,7 @@
       </div>
       <div class="d-flex mt-4">
         <button class="bt-change-2 me-5 ms-5">Mua Ngay!</button>
-        <button class="bt-change-3">Thêm vào giỏ hàng</button>
+        <button class="bt-change-3" (click)="addToCartList()">Thêm vào giỏ hàng</button>
       </div>
     </div>
   </div>

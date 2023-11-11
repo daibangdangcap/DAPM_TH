@@ -32,16 +32,21 @@ export class LoginComponent{
 
   submitFormRegis(){
     this.http.post(this.api.getAPI()+'khachhang/dangKy',{name:this.name, email:this.email, sdt:this.sdt, password:this.password}).subscribe((data:any)=>{
-      console.log("Success")
-      this.router.navigate([`/emailAuth`])
-      this.AuthService.setUser(data)
+      if(data.error)
+      {
+        console.log(data.error)
+      }
+      else{
+        console.log("Success")
+        this.router.navigate([`/emailAuth`])
+      }
     })
   }
 
   submitFormLogin(){
     this.http.post(this.api.getAPI()+'khachhang/dangNhap',{email:this.email,password:this.password}).subscribe((data:any)=>{
-      this.router.navigate([`/product`])
-      this.AuthService.LogIn();
+      this.router.navigate([`/catalog`])
+      this.AuthService.LogIn(data);
     })
   }
 }

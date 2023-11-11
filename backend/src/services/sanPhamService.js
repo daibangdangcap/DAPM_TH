@@ -63,8 +63,7 @@ var findSP = async(tenSP)=>
         var regex = new RegExp(tenSP, 'i');
         sanPhamModel.find({tenSP:{ $regex: regex}}).then((result)=>
         {
-            console.log(result)
-            return result
+            resolve(result);
         })
         .catch((error)=>{
             reject(error);

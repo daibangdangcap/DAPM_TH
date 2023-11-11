@@ -1,0 +1,11 @@
+<div *ngFor="let item of listOrder">
+  <p>id đơn hàng: {{item._id}}</p>
+  <p>người đặt: {{item.nameUser}}</p>
+  <p>địa chỉ email: {{item.email}}</p>
+  <p>số điện thoại: {{item.sdt}}</p>
+  <p>địa chỉ giao hàng: {{item.addressDelivery}}</p>
+  <p>ngày đặt: {{item.ngayDat}}</p>
+  <p>tổng số lượng mua: {{item.tongSLMua}}</p>
+  <p>tổng tiền: {{item.tongTien}}</p>
+  <button>hiển thị đơn hàng chi tiết</button>
+</div>

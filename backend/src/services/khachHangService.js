@@ -21,37 +21,46 @@ var transporter=nodemailer.createTransport({
 
 var dangKy=async (req)=>{
     try{
-        var user=new khachHangModel({
-            hoTen:req.body.name,
-            email:req.body.email,
-            sdt:req.body.sdt,
-            matKhau:req.body.password,
-            verified:false
-        })
-        const salt=await bcrypt.genSalt(10)
-        const hashPass=await bcrypt.hash(user.matKhau,salt)
-        user.matKhau=hashPass
-        await user.save()
-        var mailOption={
-            from:' "verify your email" <filetohfish2003@gmail.com>',
-            to:user.email,
-            subject:'Filet O Fish - verify your email',
-            html: `<h2>Hi ${user.hoTen}! Thanks for your registering on our site</h2>
-                    <h4>Please verify your mail to continue...</h4>
-                    <a href="http://localhost:4200/verify-email/${user.email}">Verify your email</a>
-            `
+        var findEmail=await khachHangModel.findOne({email:req.body.email})
+        if(findEmail)
+        {
+            console.log(findEmail)
         }
-
-        transporter.sendMail(mailOption,(error,success)=>{
-            if(error)
-            {
-                console.log(error)
+        else{
+            var user=new khachHangModel({
+                hoTen:req.body.name,
+                email:req.body.email,
+                sdt:req.body.sdt,
+                matKhau:req.body.password,
+                verified:false
+            })
+            console.log(user)
+            const salt=await bcrypt.genSalt(10)
+            const hashPass=await bcrypt.hash(user.matKhau,salt)
+            user.matKhau=hashPass
+            await user.save()
+            var mailOption={
+                from:' "verify your email" <filetohfish2003@gmail.com>',
+                to:user.email,
+                subject:'Filet O Fish - verify your email',
+                html: `<h2>Hi ${user.hoTen}! Thanks for your registering on our site</h2>
+                        <h4>Please verify your mail to continue...</h4>
+                        <a href="http://localhost:4200/verify-email/${user.email}">Verify your email</a>
+                `
             }
-            else{
-                console.log('A verify mail is sending to your email')
-            }
-        })
-        return user
+    
+            transporter.sendMail(mailOption,(error,success)=>{
+                if(error)
+                {
+                    console.log(error)
+                }
+                else{
+                    console.log('A verify mail is sending to your email')
+                }
+            })
+            return user
+        }
+        
     }catch(error)
     {
         console.log(error)
@@ -64,6 +73,7 @@ var getVerify=async(req,res)=>{
         const newToken=token.replace(/:/g,'')
         const user=await khachHangModel.findOne({email:newToken})
         if(user){
+            console.log(user)
             user.verified=true
             await user.save()
         }
@@ -96,5 +106,7 @@ var dangNhap=async(req,res)=>{
         console.log(error)
     }
 }
+
+
 
 module.exports={dangKy,getVerify,dangNhap}

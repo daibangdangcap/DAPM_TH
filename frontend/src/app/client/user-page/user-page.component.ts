@@ -2,6 +2,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { API } from 'src/app/services/API.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-page',
@@ -10,7 +11,7 @@ import { API } from 'src/app/services/API.service';
   providers:[API]
 })
 export class UserPageComponent implements OnInit{
-  constructor(private http:HttpClient, private api: API, private authService:AuthService){}
+  constructor(private http:HttpClient, private api: API, private authService:AuthService, private router:Router){}
   user:any
   getUserInform(){
     this.user=this.authService.getUser()
@@ -18,5 +19,10 @@ export class UserPageComponent implements OnInit{
   }
   ngOnInit(): void {
       this.getUserInform()
+  }
+
+  logOut(){
+    this.authService.LogOut()
+    this.router.navigate([`/HomePage`])
   }
 }
