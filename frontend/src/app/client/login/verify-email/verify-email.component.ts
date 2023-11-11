@@ -19,12 +19,12 @@ export class VerifyEmailComponent implements OnInit{
   verifiedSuccess(){
     const token=this.activeRoute.snapshot.params['token'];
     console.log(token)
-    this.http.get('http://localhost:3800/khachhang/verifyEmail/:'+token).subscribe((data:any)=>{
+    this.http.get('http://localhost:3800/khachhang/verify-email/:'+token).subscribe((data:any)=>{
       console.log('Verified your gmail successfully!')
     })
   }
 
   changeToLoginPage(){
-    this.router.navigate(['/login']);
+    this.router.navigate(['/Login']);
   }
 }

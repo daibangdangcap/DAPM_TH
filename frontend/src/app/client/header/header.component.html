@@ -2,13 +2,6 @@
   <a class="navbar-brand" [routerLink]="['/HomePage']">
     <img src="assets\Shared\logo.png" id="logo" />
   </a>
-
-  <!-- <div class="d-flex">
-        <div class="search">
-          <input type="text" class="search-input" placeholder="Tìm kiếm..." />
-          <a><i class="fas fa-search fa-lg" style="color: #f1f1f1; font-size: 1.5rem; background-color: #316CB7;"></i></a>
-        </div>
-    </div> -->
   <div class="container">
     <div class="search_wrap">
       <div class="search_box">
@@ -31,7 +24,7 @@
   ></i>
 
   <nav class="navbar">
-    <a href="#">Mua Sắm</a>
+    <a [routerLink]="['/Catalog']">Mua Sắm</a>
     <!-- Dropdown -->
     <div class="dropdown">
       <a
@@ -44,15 +37,15 @@
         <i class="fas fa-user-circle" style="font-size: 1.5rem"></i>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <li>
-            <a class="dropdown-item" [routerLink]="['user/account']"
+            <a class="dropdown-item" [routerLink]="['Login']"
               >Đăng nhập</a
             >
           </li>
-          <li><a class="dropdown-item" href="#">Đăng ký</a></li>
+          <li><a class="dropdown-item">Đăng ký</a></li>
         </ul>
       </a>
       <ng-template #loggedIn>
-        <a>
+        <a [routerLink]="['/User']">
           <img
             src="assets/Login/avatar.png"
             style="height: auto; width: 35px; border-radius: 50px"
@@ -61,9 +54,14 @@
       </ng-template>
     </div>
     <!--  -->
-    <a href="#"
-      ><i class="fas fa-shopping-bag" style="font-size: 1.5rem"></i
-    ></a>
+    <a [routerLink]="['/Cart']" class="nav-link nav-icon iconClass">
+      <i
+        class="fas fa-shopping-bag"
+        style="font-size: 1.5rem; position: relative"
+      >
+        <span class="badge badge-light">{{ slcart }}</span>
+      </i></a
+    >
   </nav>
 </header>
 <div class="nav-bg"></div>

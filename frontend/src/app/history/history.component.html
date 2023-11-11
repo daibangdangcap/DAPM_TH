@@ -19,7 +19,7 @@
                         <a routerLinkActive="active" routerLink="/History" (click)="onClickItem(1)" [ngClass]="activeIndex === 1 ? 'selectedItem' : 'unseletedItem'">Lịch Sử Mua Hàng</a>
                     </li>
                     <li class="py-3">
-                        <a (click)="onClickItem(2)" [ngClass]="activeIndex === 2 ? 'selectedItem' : 'unseletedItem'">Đăng Xuất</a>
+                        <a (click)="logOut()">Đăng Xuất</a>
                     </li>
                 </ul>
             </div>
@@ -37,13 +37,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>10/11/2023</td>
-                                <td>2</td>
+                            <tr *ngFor="let item of listOrder, let i = index">
+                                <th scope="row">{{ [i + 1] }}</th>
+                                <td>{{item.ngayDat | date: 'mm/dd/yyyy'}}</td>
+                                <td>{{item.tongSLMua}}</td>
                                 <td>
-                                    25.000Đ
-                                    <span class ="ninja" style="padding-left: 20px"><a  routerLinkActive="active" routerLink="/User">Xem Chi Tiết >>></a></span>
+                                    {{item.tongTien |currency:"VND" :" "}}Đ
+                                    <span class ="ninja" style="padding-left: 20px"><a  routerLinkActive="active" routerLink="/Detail-Order/{{item._id}}">Xem Chi Tiết >>></a></span>
                                 </td>
                             </tr>
                         </tbody>

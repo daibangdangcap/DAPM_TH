@@ -42,4 +42,33 @@ var getDetailSanPham=async(idProduct)=>{
     return sp
 }
 
-module.exports={createNewSanPham,getAllSanPham,getDetailSanPham}
+
+var getSPFromOcean=async(req)=>{
+    var sp=await loaiDaiDuongModel.findOne({tenLoaiDaiDuong:req.body.daiDuong}).then( async document=>{
+        var listID= await document.idCacSP
+        var listSP= []
+        var listproduct=await listID.map(async itemID=>{
+            return await sanPhamModel.findById(itemID)
+        })
+        listSP=await Promise.all(listproduct)
+        console.log(listSP)
+        return listSP
+    })
+    return sp
+}
+var findSP = async(tenSP)=>
+{
+    return new Promise(function myFn(resolve,reject)
+    {
+        var regex = new RegExp(tenSP, 'i');
+        return sanPhamModel.find({tenSP:{ $regex: regex}}).then((result)=>
+        {
+            resolve(result);
+        })
+        .catch((error)=>{
+            reject(error);
+        })
+    })
+}
+
+module.exports={createNewSanPham,getAllSanPham,getDetailSanPham, getSPFromOcean, findSP}
