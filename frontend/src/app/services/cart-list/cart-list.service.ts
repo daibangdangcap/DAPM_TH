@@ -7,13 +7,20 @@ import { cartItem } from '../cart-item/cartItem.service';
 export class CartListService {
   cartList:cartItem[]=[]
   constructor() { }
-
+  countCart :number =0;
   getCartList(){
     this.cartList=JSON.parse(localStorage.getItem('cartList'))
     if(this.cartList==null) this.cartList=[]
     return this.cartList
   }
-
+  countCartList()
+  {
+    this.getCartList()
+    this.cartList.forEach(item => {
+      this.countCart = item.soLuongMua + this.countCart
+    })
+    return this.countCart
+  }
   addItemIntoList(item:cartItem){
     this.getCartList()
     if(this.cartList.length<1)

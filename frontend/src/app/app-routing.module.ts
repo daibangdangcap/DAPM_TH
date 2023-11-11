@@ -8,7 +8,6 @@ import { ProductDetailComponent } from './client/product-detail/product-detail.c
 import { VerifyNotiComponent } from './client/login/verify-noti/verify-noti.component';
 import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
 import { CatalogComponent } from './client/catalog/catalog.component';
-import { UserPageComponent } from './client/user-page/user-page.component';
 import { CartListComponent } from './cart-list/cart-list.component';
 import { PurchaseComponent } from './client/purchase/purchase.component';
 import { UserPageComponent } from './client/user-page/user-page.component';

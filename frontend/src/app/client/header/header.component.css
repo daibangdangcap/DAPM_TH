@@ -4,7 +4,7 @@
 }
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   padding: 20px 50px;
@@ -72,7 +72,18 @@
 .navbar a:hover {
   color: #316cb7;
 }
-
+.iconClass{
+  position:relative;
+}
+.iconClass span{
+  position: absolute;
+  top: -5px;
+  right: -12px;
+  font-size: 10px;
+  background-color: red;
+  border-radius: 50%;
+  display: block;
+}
 
 /* RESPONSIVE */
 @media (max-width: 992px) {

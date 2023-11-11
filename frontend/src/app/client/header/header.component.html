@@ -2,13 +2,6 @@
   <a class="navbar-brand" [routerLink]="['/HomePage']">
     <img src="assets\Shared\logo.png" id="logo" />
   </a>
-
-  <!-- <div class="d-flex">
-        <div class="search">
-          <input type="text" class="search-input" placeholder="Tìm kiếm..." />
-          <a><i class="fas fa-search fa-lg" style="color: #f1f1f1; font-size: 1.5rem; background-color: #316CB7;"></i></a>
-        </div>
-    </div> -->
   <div class="container">
     <div class="search_wrap">
       <div class="search_box">
@@ -61,9 +54,14 @@
       </ng-template>
     </div>
     <!--  -->
-    <a [routerLink]="['/cart']"
-      ><i class="fas fa-shopping-bag" style="font-size: 1.5rem"></i
-    ></a>
+    <a [routerLink]="['/cart']" class="nav-link nav-icon iconClass">
+      <i
+        class="fas fa-shopping-bag"
+        style="font-size: 1.5rem; position: relative"
+      >
+        <span class="badge badge-light">{{ slcart }}</span>
+      </i></a
+    >
   </nav>
 </header>
 <div class="nav-bg"></div>

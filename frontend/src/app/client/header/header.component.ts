@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { CartListService } from 'src/app/services/cart-list/cart-list.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HeaderComponent implements OnInit{
   user:any
-  constructor(private AuthService: AuthService)
+  slcart:number
+  constructor(private AuthService: AuthService, private cartService: CartListService)
   {  }
   isLoggedIn(){
     this.getUser()
@@ -18,8 +20,11 @@ export class HeaderComponent implements OnInit{
   getUser(){
     this.user=this.AuthService.getUser()
   }
-
+  countSL(){
+    this.slcart = this.cartService.countCartList();
+  }
   ngOnInit(): void {
       this.getUser()
-  }
+      this.countSL()
+    }
 }
