@@ -19,5 +19,15 @@ var getSPFromOcean=async(req,res)=>{
     var sp=await sanPhamService.getSPFromOcean(req)
     res.send(sp)
 }
-
-module.exports={createNewSanPham,getAllSanPham,getDetailSanPham,getSPFromOcean}
+var findSP = async(req,res)=>{
+    console.log(req.body.tenSP)
+    var sp = await sanPhamService.findSP(req.body.tenSP)
+    if (sp!=null){
+        res.send(sp)
+    }
+    else
+    {
+        res.send({"status":false});
+    }
+}
+module.exports={createNewSanPham,getAllSanPham,getDetailSanPham,getSPFromOcean, findSP}

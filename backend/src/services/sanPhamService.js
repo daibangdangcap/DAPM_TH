@@ -56,5 +56,20 @@ var getSPFromOcean=async(req)=>{
     })
     return sp
 }
+var findSP = async(tenSP)=>
+{
+    return new Promise(function myFn(resolve,reject)
+    {
+        var regex = new RegExp(tenSP, 'i');
+        sanPhamModel.find({tenSP:{ $regex: regex}}).then((result)=>
+        {
+            console.log(result)
+            return result
+        })
+        .catch((error)=>{
+            reject(error);
+        })
+    })
+}
 
-module.exports={createNewSanPham,getAllSanPham,getDetailSanPham, getSPFromOcean}
+module.exports={createNewSanPham,getAllSanPham,getDetailSanPham, getSPFromOcean, findSP}

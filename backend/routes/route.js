@@ -11,6 +11,7 @@ router.route('/sanpham/createNewSanPham').post(upload.upload.array('images',3),s
 router.route('/sanpham/getAllSanPham').get(sanPhamController.getAllSanPham) //lấy danh sách sản phẩm
 router.route('/sanpham/getDetailSanPham/:idProduct').get(sanPhamController.getDetailSanPham)// lấy chi tiết danh sách sản phẩm
 router.route('/sanpham/getSPFromOcean').post(sanPhamController.getSPFromOcean)
+router.route('/sanpham/findSP/:tenSP').get(sanPhamController.findSP) //Tim kiem SP
 
 //KHÁCH HÀNG
 router.route('/khachhang/dangKy').post(khachHangController.dangKy)// tạo tài khoản
