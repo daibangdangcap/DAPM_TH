@@ -34,7 +34,7 @@ export class LoginComponent{
     this.http.post(this.api.getAPI()+'khachhang/dangKy',{name:this.name, email:this.email, sdt:this.sdt, password:this.password}).subscribe((data:any)=>{
       console.log("Success")
       this.router.navigate([`/emailAuth`])
-      
+      this.AuthService.setUser(data)
     })
   }
 

@@ -39,7 +39,7 @@
         id="dropdownMenuLink"
         data-bs-toggle="dropdown"
         aria-expanded="false"
-        *ngIf="!isLoggedIn(); else loggedIn"
+        *ngIf="isLoggedIn(); else loggedIn"
       >
         <i class="fas fa-user-circle" style="font-size: 1.5rem"></i>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
