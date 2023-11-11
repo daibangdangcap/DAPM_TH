@@ -15,6 +15,8 @@ import { Router } from '@angular/router';
 export class CartListComponent implements OnInit{
   listSP:cartItem[]=[]
   idUser=''
+  tongTien:number=0
+  countSL:number=0;
   constructor(private http:HttpClient ,private cartlist:CartListService, private api:API, private auth:AuthService,private router:Router){}
   ngOnInit(): void {
     this.getCartList()
@@ -22,9 +24,28 @@ export class CartListComponent implements OnInit{
 
   getCartList(){
     this.listSP=this.cartlist.getCartList()
+    this.listSP.forEach(item=>{
+      this.tongTien=this.tongTien+item.thanhTien
+      this.countSL=this.countSL+item.soLuongMua
+    })
   }
 
   changeToPurchasePage(){
     this.router.navigate(['/purchase'])
+  }
+  count=0;
+  counter(type:string){
+    if(type === 'add'){
+      this.count++
+    }
+    else if(type==='minus' && this.count >0){
+      this.count--
+    }
+  }
+  deleteIt(item:cartItem){
+    this.cartlist.deleteItem(item);
+    this.cartlist.getCartList()
+    window.location.reload()
+    console.log(1)
   }
 }

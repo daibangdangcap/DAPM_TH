@@ -44,8 +44,8 @@ export class CartListService {
 
   deleteItem(cart:cartItem){
     this.getCartList()
-    const index=this.cartList.indexOf(cart)
-    if(index>-1)
+    const index=this.cartList.findIndex(item=>item.id===cart.id)
+    if(index!==-1)
     {
       this.cartList.splice(index,1)
       localStorage.setItem('cartList',JSON.stringify(this.cartList))

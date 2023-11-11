@@ -1,0 +1,113 @@
+@font-face {
+  font-family: Inter;
+  src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+@font-face {
+  font-family: BalooTamma;
+  src: url(/assets/BalooTamma-Regular.ttf);
+}
+body {
+  margin-top: 150px;
+}
+/* cột-hình */
+.img-change {
+  height: 14vh;
+  width: 8vw;
+  padding: 10px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+/* Thẻ-p */
+p {
+  margin: 0;
+}
+.p-change-1 {
+  color: #4e4c4c;
+  font-family: "Inter";
+  font-size: 40px;
+  font-weight: 600;
+}
+.p-change-2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #5c5c5c;
+  font-family: "Inter";
+  padding-left: 20px;
+}
+.p-change-3 {
+  color: #5d5d5d;
+  font-family: "Inter";
+  font-size: 23px;
+  font-weight: 500;
+}
+.p-change-4 {
+  color: #0c0c0c;
+  font-size: 25px;
+  font-weight: 500;
+}
+/* Nút */
+.button-change {
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+  background: #fff;
+}
+.button-change-2 {
+  width: 100%;
+  height: 100%;
+  background: #91c8e4;
+  border: none;
+  font-family: "BalooTamma";
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+.button-change-3 {
+  border: none;
+  background: none;
+}
+/* Icon */
+.icon {
+  color: #acacac;
+  font-size: 25px;
+}
+/* Scrollbar */
+.scrollbar{
+  overflow: auto;
+  max-height: 50vh;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* Khung va cac the khac */
+hr {
+  stroke-width: 2px;
+  stroke: rgba(201, 201, 201, 0.8);
+}
+.khung {
+  border-radius: 15px 15px 0px 0px;
+  background: rgba(244, 240, 240, 0.7);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.con-item {
+  height: 16vh;
+  padding: 15px 15px 0 15px;
+}

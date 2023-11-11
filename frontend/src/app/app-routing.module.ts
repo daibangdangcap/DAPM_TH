@@ -13,6 +13,7 @@ import { PurchaseComponent } from './client/purchase/purchase.component';
 import { UserPageComponent } from './client/user-page/user-page.component';
 import { CartHistoryComponent } from './client/cart-history/cart-history.component';
 import { PurchaseNoticeComponent } from './client/purchase-notice/purchase-notice.component';
+import { ShoppingCartComponent } from './client/shopping-cart/shopping-cart.component';
 
 const routes: Routes = [
   // CLIENT
@@ -20,24 +21,24 @@ const routes: Routes = [
     path: '',
     component: ClientLayoutComponent,
     children: [
-  { path : '', redirectTo:'/HomePage', pathMatch: 'full'},
-  { path: 'login', component: LoginComponent },
-  { path: 'HomePage', component: HomepageComponent },
-  { path: 'user/account', component: LoginComponent},
-  { path: 'product',component:ProductComponent},
-  { path: 'catalog', component: CatalogComponent},
-  { path: 'verify-email/:token',component:VerifyEmailComponent},
-  { path: 'product-detail/:idProduct',component: ProductDetailComponent},
-  { path: 'userpage', component: UserPageComponent},
-  { path: 'cart', component: CartListComponent},
-  { path: 'purchase-notice',component: PurchaseNoticeComponent},
-  { path: 'cart-history',component: CartHistoryComponent},
-  { path: 'purchase-notice',component: PurchaseNoticeComponent}
-    ]
-},
+      { path: '', redirectTo: '/HomePage', pathMatch: 'full' },
+      { path: 'login', component: LoginComponent },
+      { path: 'HomePage', component: HomepageComponent },
+      { path: 'user/account', component: LoginComponent },
+      { path: 'product', component: ProductComponent },
+      { path: 'catalog', component: CatalogComponent },
+      { path: 'verify-email/:token', component: VerifyEmailComponent },
+      { path: 'product-detail/:idProduct', component: ProductDetailComponent },
+      { path: 'userpage', component: UserPageComponent },
+      { path: 'Cart', component: CartListComponent },
+      { path: 'Cart-History', component: CartHistoryComponent },    
+      { path: 'Shopping-Cart', component: ShoppingCartComponent },
+    ],
+  },
   //NO
-  { path: 'emailAuth', component:VerifyNotiComponent},
-  { path: 'purchase', component: PurchaseComponent},
+  { path: 'emailAuth', component: VerifyNotiComponent },
+  { path: 'Purchase', component: PurchaseComponent },
+  { path: 'Purchase-Notice', component: PurchaseNoticeComponent },
 ];
 
 @NgModule({
