@@ -20,8 +20,8 @@ var getSPFromOcean=async(req,res)=>{
     res.send(sp)
 }
 var findSP = async(req,res)=>{
-    console.log(req.body.tenSP)
-    var sp = await sanPhamService.findSP(req.body.tenSP)
+    console.log(req.params.tenSP)
+    var sp = await sanPhamService.findSP(req.params.tenSP)
     if (sp!=null){
         res.send(sp)
     }
