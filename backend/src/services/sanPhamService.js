@@ -61,7 +61,7 @@ var findSP = async(tenSP)=>
     return new Promise(function myFn(resolve,reject)
     {
         var regex = new RegExp(tenSP, 'i');
-        sanPhamModel.find({tenSP:{ $regex: regex}}).then((result)=>
+        return sanPhamModel.find({tenSP:{ $regex: regex}}).then((result)=>
         {
             resolve(result);
         })
