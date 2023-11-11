@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-page.component.css']
 })
 export class UserPageComponent {
+  activeIndex = 0;  
 
+  onClickItem(index: number) {
+    this.activeIndex = index;
+  }
 }

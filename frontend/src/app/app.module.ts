@@ -20,6 +20,7 @@ import { VerifyEmailComponent } from './client/login/verify-email/verify-email.c
 import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
 import { NextDirective } from './directive/next.directive';
 import { BackDirective } from './directive/back.directive';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { BackDirective } from './directive/back.directive';
     ClientLayoutComponent,
     NextDirective,
     BackDirective,
+    HistoryComponent,
   ],
   imports: [
     BrowserModule,

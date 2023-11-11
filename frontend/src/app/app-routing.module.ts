@@ -9,6 +9,7 @@ import { VerifyNotiComponent } from './client/login/verify-noti/verify-noti.comp
 import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
 import { UserPageComponent } from './client/user-page/user-page.component';
 import { CatalogComponent } from './client/catalog/catalog.component';
+import { HistoryComponent } from './history/history.component';
 
 const routes: Routes = [
   // CLIENT
@@ -17,14 +18,15 @@ const routes: Routes = [
     component: ClientLayoutComponent,
     children: [
   { path : '', redirectTo:'/HomePage', pathMatch: 'full'},
-  { path: 'login', component: LoginComponent },
+  { path: 'Login', component: LoginComponent },
   { path: 'HomePage', component: HomepageComponent },
-  { path: 'user/account', component: LoginComponent},
-  { path: 'product',component:ProductComponent},
+  { path: 'User/Account', component: LoginComponent},
+  { path: 'Product',component:ProductComponent},
   {path: 'Catalog', component: CatalogComponent},
-  { path: 'verify-email/:token',component:VerifyEmailComponent},
-  { path: 'product-detail/:idProduct',component: ProductDetailComponent},
-  { path: 'user', component: UserPageComponent}
+  { path: 'Verify-Email/:token',component:VerifyEmailComponent},
+  { path: 'Product-Detail/:idProduct',component: ProductDetailComponent},
+  { path: 'User', component: UserPageComponent},
+  { path: 'History', component: HistoryComponent}
     ]
 },
   //NO
