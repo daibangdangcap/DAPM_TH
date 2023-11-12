@@ -12,7 +12,7 @@ var danhSachDonHang=async(req,res)=>{
 }
 
 var CTDH=async(req,res)=>{
-    var list=donHangService.CTDH(req)
+    var list=await donHangService.CTDH(req)
     res.send(list)
 }
 

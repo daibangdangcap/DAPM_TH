@@ -58,7 +58,6 @@ var danhSachDonHang=async(req)=>{
 
 var CTDH=async(req)=>{
     var item=await donHangModel.findById(req.body.idOrder)
-    console.log(item)
     return item
 }
 

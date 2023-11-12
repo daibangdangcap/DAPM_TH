@@ -28,6 +28,8 @@ import { CartHistoryComponent } from './client/cart-history/cart-history.compone
 import { SearchpageComponent } from './client/searchpage/searchpage.component';
 import { ShoppingCartComponent } from './client/shopping-cart/shopping-cart.component';
 import { ReceiptDetailComponent } from './receipt-detail/receipt-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,9 @@ import { ReceiptDetailComponent } from './receipt-detail/receipt-detail.componen
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

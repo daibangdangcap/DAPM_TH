@@ -39,7 +39,7 @@
                         <tbody>
                             <tr *ngFor="let item of listOrder, let i = index">
                                 <th scope="row">{{ [i + 1] }}</th>
-                                <td>{{item.ngayDat | date: 'mm/dd/yyyy'}}</td>
+                                <td>{{item.ngayDat | date: 'dd/MM/YYYY'}}</td>
                                 <td>{{item.tongSLMua}}</td>
                                 <td>
                                     {{item.tongTien |currency:"VND" :" "}}Đ

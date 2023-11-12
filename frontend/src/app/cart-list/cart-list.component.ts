@@ -1,3 +1,4 @@
+import { ToastService } from './../services/toastService/toast.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CartListService } from '../services/cart-list/cart-list.service';
@@ -17,7 +18,8 @@ export class CartListComponent implements OnInit{
   idUser=''
   tongTien:number=0
   countSL:number=0;
-  constructor(private http:HttpClient ,private cartlist:CartListService, private api:API, private auth:AuthService,private router:Router){}
+  constructor(private http:HttpClient ,private cartlist:CartListService, private api:API, private auth:AuthService,private router:Router
+    , private toastMessage:ToastService){}
   ngOnInit(): void {
     this.getCartList()
   }
@@ -31,7 +33,11 @@ export class CartListComponent implements OnInit{
   }
 
   changeToPurchasePage(){
-    this.router.navigate(['/Purchase']);
+    if(this.listSP.length==0)
+    {
+      this.toastMessage.show('Chưa có sản phẩm nào trong giỏ hàng của bạn')
+    }
+    else this.router.navigate(['/Purchase']);
   }
   backToCatalog() {
     this.router.navigate(['/Catalog']);
@@ -49,6 +55,5 @@ export class CartListComponent implements OnInit{
     this.cartlist.deleteItem(item);
     this.cartlist.getCartList()
     window.location.reload()
-    console.log(1)
   }
 }
