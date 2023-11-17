@@ -58,8 +58,8 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     SearchpageComponent,
     PurchaseNoticeComponent,
     ShoppingCartComponent,
-    ReceiptDetailComponent
-  ],
+    ReceiptDetailComponent,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

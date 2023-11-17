@@ -16,6 +16,7 @@ import { CartHistoryComponent } from './client/cart-history/cart-history.compone
 import { PurchaseNoticeComponent } from './client/purchase-notice/purchase-notice.component';
 import { ShoppingCartComponent } from './client/shopping-cart/shopping-cart.component';
 import { ReceiptDetailComponent } from './receipt-detail/receipt-detail.component';
+import { SearchpageComponent } from './client/searchpage/searchpage.component';
 
 const routes: Routes = [
   // CLIENT
@@ -23,28 +24,30 @@ const routes: Routes = [
     path: '',
     component: ClientLayoutComponent,
     children: [
-  { path : '', redirectTo:'/HomePage', pathMatch: 'full'},
-  { path: 'Login', component: LoginComponent },
-  { path: 'HomePage', component: HomepageComponent },
-  { path: 'Product',component:ProductComponent},
-  {path: 'Catalog', component: CatalogComponent},
+      { path: '', redirectTo: '/HomePage', pathMatch: 'full' },
+      { path: 'Login', component: LoginComponent },
+      { path: 'HomePage', component: HomepageComponent },
+      { path: 'Product', component: ProductComponent },
+      { path: 'Catalog', component: CatalogComponent },
       { path: 'verify-email/:token', component: VerifyEmailComponent },
-  { path: 'Product-Detail/:idProduct',component: ProductDetailComponent},
-  { path: 'User', component: UserPageComponent},
-  { path: 'History', component: HistoryComponent},
+      { path: 'Product-Detail/:idProduct', component: ProductDetailComponent },
+      { path: 'User', component: UserPageComponent },
+      { path: 'History', component: HistoryComponent },
       { path: 'Shopping-Cart', component: ShoppingCartComponent },
-      { path: 'Cart-History', component: CartHistoryComponent },    
-      { path: 'Cart', component: CartListComponent }],
-    },
+      { path: 'Cart-History', component: CartHistoryComponent },
+      { path: 'Search', component: SearchpageComponent },
+      { path: 'Cart', component: CartListComponent },
+    ],
+  },
   //NO
   { path: 'emailAuth', component: VerifyNotiComponent },
   { path: 'Purchase', component: PurchaseComponent },
   { path: 'Purchase-Notice', component: PurchaseNoticeComponent },
-  { path: 'Detail-Order/:idOrder', component: ReceiptDetailComponent}
-]
+  { path: 'Detail-Order/:idOrder', component: ReceiptDetailComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
