@@ -11,7 +11,7 @@ var getVerify=(req,res)=>{
 
 var dangNhap=async(req,res)=>{
     var user=await khachHangService.dangNhap(req)
-    if(user==="Invalid password")
+    if(user==="Invalid password!")
     {
         res.send({invalidPass: user})
     }

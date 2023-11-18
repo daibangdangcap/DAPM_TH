@@ -24,7 +24,7 @@ var dangKy=async (req)=>{
         var findEmail=await khachHangModel.findOne({email:req.body.email})
         if(findEmail)
         {
-            console.log(findEmail)
+            return 'Email existed'
         }
         else{
             var user=new khachHangModel({
