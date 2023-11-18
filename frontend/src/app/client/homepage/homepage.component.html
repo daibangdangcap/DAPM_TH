@@ -78,12 +78,21 @@
         <div class="item" *ngFor="let list of listSP">
           <span href="#" (click)="changeToDetailPage(list._id)">
             <div class="card mb-3">
-              <img
-                src="http://localhost:3800/ProductImages/{{
-                  list.hinhAnh[0].tenImageSP
-                }}"
-                class="proimage card-img-top p-2"
-              />
+              <div
+                style="
+                  background: url(/assets/Shared/search-bg.jpg);
+                  background-size: cover;
+                "
+                class="text-center"
+              >
+                <img
+                  src="http://localhost:3800/ProductImages/{{
+                    list.hinhAnh[0].tenImageSP
+                  }}"
+                  class="proimage card-img-top p-2"
+                />
+              </div>
+
               <div class="card-body">
                 <h5 class="card-title fs-3">{{ list.tenSP }}</h5>
                 <div class="col d-flex justify-content-between">

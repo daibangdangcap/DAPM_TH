@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SearchService } from 'src/app/services/search.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-searchpage',
   templateUrl: './searchpage.component.html',
@@ -10,7 +10,7 @@ import { SearchService } from 'src/app/services/search.service';
 export class SearchpageComponent implements OnInit {
   searchResults: any[];
 
-  constructor(private route: ActivatedRoute, private proService : SearchService) {}
+  constructor(private route: ActivatedRoute, private proService : SearchService , private router:Router) {}
 
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
@@ -19,6 +19,7 @@ export class SearchpageComponent implements OnInit {
         this.proService.searchProducts(tenSP).subscribe(
           (data) => {
             this.searchResults=data.data;
+            console.log(this.searchResults)
           },
           (error) => {
             console.error(error);
@@ -26,5 +27,8 @@ export class SearchpageComponent implements OnInit {
         );
       }
     });
+}
+changeToDetailPage(idSanPham){
+  this.router.navigate([`/Product-Detail`,idSanPham])
 }
 }

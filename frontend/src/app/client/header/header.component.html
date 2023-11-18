@@ -39,13 +39,11 @@
         aria-expanded="false"
         *ngIf="!isLoggedIn(); else loggedIn"
       >
-        <i class="fas fa-user-circle" style="font-size: 1.5rem"></i>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <li>
-            <a class="dropdown-item" [routerLink]="['Login']">Đăng nhập</a>
-          </li>
-          <li><a class="dropdown-item">Đăng ký</a></li>
-        </ul>
+        <i
+          class="fas fa-user-circle"
+          style="font-size: 1.5rem"
+          [routerLink]="['Login']"
+        ></i>
       </a>
       <ng-template #loggedIn>
         <a [routerLink]="['/User']">
