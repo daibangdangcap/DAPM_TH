@@ -7,7 +7,36 @@
     src: url(/assets/BalooTamma-Regular.ttf);
   }
   body {
-    margin-top: 150px;
+    margin-top: 10px;
+  }
+  .banner {
+    background: linear-gradient(-90deg, rgba(53,102,163,1) 1%, rgba(62,112,174,1) 21%, rgba(120,164,210,1) 59%, rgba(168,202,228,1) 98%);
+    width: 100%;
+    height: 164px;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    padding: 55px 0px 0px 40px;
+    color: #F6F4EC;
+  }
+  .bannerFish {
+    width: 223px;
+    height: 147px;
+  }
+  .left {
+    width: 80%;
+    height: auto;
+    position: relative;
+  }
+  .right {
+    width: 20%;
+    height: auto;
+    margin-top: 10px;
+  }
+  .right img {
+    max-width: 100%;
+    width: 200px;
   }
   /* cột-hình */
   .img-change {
@@ -50,9 +79,9 @@
   }
   /* Nút */
   .button-change {
-    border-radius: 5px;
-    border: 1px solid #e1e1e1;
-    background: #fff;
+    border: none;
+    background: transparent;
+    color: #4e4c4c;
   }
   .button-change-2 {
     width: 100%;
