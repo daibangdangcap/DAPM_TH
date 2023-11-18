@@ -2,55 +2,50 @@
 .khung-1 {
   position: relative;
   width: 100%;
-/* Tiến Thành */
+  /* Tiến Thành */
 }
-body{
-  background: #FEFEFE;
+body {
+  background: #fefefe;
 }
-.imageSlider1{
-  width:100%;
+.imageSlider1 {
+  width: 100%;
   height: 100vh;
 }
 
-.image2{
+.image2 {
   height: 500px;
-  width:100%;
+  width: 100%;
 }
 
-
-
-  @font-face {
-     font-family: balloTamma;
-     src: url(../../../assets/fonts/Baloo-Regular.ttf);
-  }
-
-  .h1 {
-     font-family: balloTamma;
-     color: #EAD1A5;
-     text-align: center;
-     margin-top: 1%;
-     font-size: 70px;
-  }
-
-.tieudenho{
+@font-face {
   font-family: balloTamma;
-  color: #5581A5;
-  font-size: 40px;
+  src: url(../../../assets/fonts/Baloo-Regular.ttf);
+}
+
+.h1 {
+  font-family: balloTamma;
+  color: #ead1a5;
   text-align: center;
   margin-top: 1%;
+  font-size: 70px;
 }
-.noidungnho{
-  color: #6F6F6F;
+
+.khung-chu {
+  margin-top: 20px;
   text-align: center;
-  font-size: 30px;
-  margin-top: -15px;
-  text-wrap:pretty;
-  font-weight: 500;
-  word-wrap: break-word;
-  width: 70%;
-  margin-left: 14%;
 }
-.item{
+.tieudenho {
+  font-family: balloTamma;
+  color: #5581a5;
+  font-size: 40px;
+}
+.noidungnho {
+  color: #6f6f6f;
+  font-size: 30px;
+  text-wrap: pretty;
+  font-weight: 500;
+}
+.item {
   width: 40%;
   height: fit-content;
   margin-left: 7.5%;
@@ -58,54 +53,53 @@ body{
   overflow-wrap: break-word;
 }
 
-.imageItem{
-  height: 350px; width: 100%;
+.imageItem {
+  height: 350px;
+  width: 100%;
 }
 
-@media only screen and (max-width:900px){
-  .item{
+@media only screen and (max-width: 900px) {
+  .item {
     height: fit-content;
     float: none;
     width: 80%;
   }
-  .imageItem{
+  .imageItem {
     height: 300px;
     width: 100%;
   }
-  .image2{
+  .image2 {
     height: 300px;
   }
-  .imageSlider1{
+  .imageSlider1 {
     height: 500px;
   }
 }
 
 /* Quang Huy */
-#background_image{
+#background_image {
   background-image: url(/assets/Hompage/background_water.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  height : 1030px
+  height: 1030px;
 }
-#bt
-{
+#bt {
   position: absolute;
-  left : 170px;
-  top : 680px;
+  left: 170px;
+  top: 680px;
   border-radius: 35px;
   border-color: white;
   padding: 20px;
-  padding-inline-end: 80px ;
-  padding-inline-start: 80px ;
+  padding-inline-end: 80px;
+  padding-inline-start: 80px;
   font: "Inter";
   font-weight: bold;
   box-shadow: 0px 0px 10px black;
   cursor: pointer;
   transition: 0.2s;
-  color: #316CB7;
+  color: #316cb7;
   background: white;
   font-size: 25px;
-
 }
 .khung-1 .bg-resize {
   width: 100vw;
@@ -126,7 +120,7 @@ body{
   text-align: center;
 }
 
-@media screen and (max-width:1123px){
+@media screen and (max-width: 1123px) {
   .khung-1 .btn-1 {
     top: 60%;
     right: 77%;
@@ -134,7 +128,7 @@ body{
     height: 70px;
     font-size: 25px;
   }
-  @media screen and (max-width:951px) {
+  @media screen and (max-width: 951px) {
     .khung-1 .btn-1 {
       top: 60%;
       right: 77%;
@@ -143,7 +137,7 @@ body{
       font-size: 22px;
     }
   }
-  @media screen and (max-width:777px) {
+  @media screen and (max-width: 777px) {
     .khung-1 .btn-1 {
       top: 60%;
       right: 77%;
@@ -154,47 +148,44 @@ body{
   }
 }
 
-#khung-muasam
-{
+#khung-muasam {
   position: relative;
   background-image: url(/assets/Hompage/background_khung_muasam.png);
   background-repeat: no-repeat;
   width: 90.2vw;
   height: 39vw;
 }
-#khung-item
-{
+#khung-item {
   border-radius: 25px;
   background-color: white;
   height: 400px;
   width: 300px;
-  padding:10px;
+  padding: 10px;
   border: 2px solid;
 }
-#font-muasam
-{
+#font-muasam {
   font-size: 4rem;
   font-family: "Inter";
   font-weight: bold;
-  color:#316CB7;
+  color: #316cb7;
   position: absolute;
-  left : 7%;
+  left: 7%;
   top: 10%;
 }
-#font-name{
+#font-name {
   font-size: 2rem;
   font-family: "Inter";
   font-weight: bold;
   margin-top: 25px;
 }
-#font-gia{
+#font-gia {
   font-size: 1.5rem;
   font-family: "Inter";
 }
-#img-size{
+#img-size {
   width: 250px;
   height: 230px;
-} 
+}
 /* SLIDER */
 
 .container-fluid {
@@ -212,7 +203,7 @@ body{
   overflow: hidden;
   height: 450px;
   margin-top: 30px;
-  margin-bottom:40px;
+  margin-bottom: 40px;
 }
 .slider-main {
   position: absolute;
@@ -229,9 +220,9 @@ body{
 .card {
   border-radius: 25px;
 }
-.proimage{
-  width:300px;
-  height:300px;
+.proimage {
+  width: 300px;
+  height: 300px;
 }
 .card-body {
   border-top: 1px solid rgb(190, 196, 190);
@@ -239,7 +230,7 @@ body{
 
 button {
   border-radius: 50%;
-  border:none;
+  border: none;
   width: 40px;
   height: 40px;
   opacity: 0.6;
