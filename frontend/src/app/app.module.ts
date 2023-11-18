@@ -18,8 +18,18 @@ import { HttpClientModule } from  '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { VerifyEmailComponent } from './client/login/verify-email/verify-email.component';
 import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
+import { CartListComponent } from './cart-list/cart-list.component';
+import { PurchaseComponent } from './client/purchase/purchase.component';
+import { PurchaseNoticeComponent } from './client/purchase-notice/purchase-notice.component';
 import { NextDirective } from './directive/next.directive';
 import { BackDirective } from './directive/back.directive';
+import { HistoryComponent } from './history/history.component';
+import { CartHistoryComponent } from './client/cart-history/cart-history.component';
+import { SearchpageComponent } from './client/searchpage/searchpage.component';
+import { ShoppingCartComponent } from './client/shopping-cart/shopping-cart.component';
+import { ReceiptDetailComponent } from './receipt-detail/receipt-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -37,15 +47,27 @@ import { BackDirective } from './directive/back.directive';
     ProductDetailComponent,
     VerifyEmailComponent,
     ClientLayoutComponent,
+    ProductDetailComponent,
+    PurchaseComponent,
+    CartListComponent,
     NextDirective,
     BackDirective,
-  ],
+    HistoryComponent,
+    CartHistoryComponent,
+    PurchaseNoticeComponent,
+    SearchpageComponent,
+    PurchaseNoticeComponent,
+    ShoppingCartComponent,
+    ReceiptDetailComponent,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

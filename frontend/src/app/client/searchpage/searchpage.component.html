@@ -1,0 +1,31 @@
+<div class="container" style="width: 100%; height: auto">
+  <div class="row row-cols-3">
+    <div
+      class="col justify-content-center d-flex"
+      *ngFor="let result of searchResults"
+    >
+      <div class="card mb-5">
+        <div class="text-center" style="background: url(/assets/Shared/search-bg.jpg); background-size: cover;">
+          <img
+            src="http://localhost:3800/ProductImages/{{
+              result.hinhAnh[0].tenImageSP
+            }}"
+            class="proimage card-img-top p-2"
+          />
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title fs-3 ps-3 mt-3 mb-3" style="font-size: 40px;">{{ result.tenSP }}</h5>
+          <div class="col justify-content-between">
+            <p class="card-text fs-5 ps-3 mt-3 mb-5" style="color: red">
+              {{ result.giaTien | currency : "VND" : " " }}Đ
+            </p>
+            <div class="text-center">
+              <a (click)="changeToDetailPage(result._id)" class="btn">Mua</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

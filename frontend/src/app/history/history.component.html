@@ -1,0 +1,55 @@
+<body>
+    <div class="banner row">
+        <div class="left">
+            <h1>Lịch Sử Mua Hàng</h1>
+        </div>
+        <div class="right">
+            <img src="assets/Login/loginFish.png" class="bannerFish" />
+        </div>
+    </div>
+
+    <div class="content container-fluid">
+        <div class="row py-4">
+            <div class="menu">
+                <ul>
+                    <li class="py-3">
+                        <a routerLinkActive="active" routerLink="/User" (click)="onClickItem(0)" [ngClass]="activeIndex === 0 ? 'selectedItem' : 'unseletedItem'">Trang Cá Nhân</a>
+                    </li>
+                    <li class="py-3">
+                        <a routerLinkActive="active" routerLink="/History" (click)="onClickItem(1)" [ngClass]="activeIndex === 1 ? 'selectedItem' : 'unseletedItem'">Lịch Sử Mua Hàng</a>
+                    </li>
+                    <li class="py-3">
+                        <a (click)="logOut()">Đăng Xuất</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-content">
+                <div class="table-responsive-lg">
+                    <h3 class="ps-5 py-3">Lịch Sử Mua Hàng Của Bạn</h3>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">STT</th>
+                                <th scope="col">Ngày Mua</th>
+                                <th scope="col">Số Lượng Đã Mua</th>
+                                <th scope="col">Tổng Tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of listOrder, let i = index">
+                                <th scope="row">{{ [i + 1] }}</th>
+                                <td>{{item.ngayDat | date: 'dd/MM/YYYY'}}</td>
+                                <td>{{item.tongSLMua}}</td>
+                                <td>
+                                    {{item.tongTien |currency:"VND" :" "}}Đ
+                                    <span class ="ninja" style="padding-left: 20px"><a  routerLinkActive="active" routerLink="/Detail-Order/{{item._id}}">Xem Chi Tiết >>></a></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

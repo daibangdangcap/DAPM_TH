@@ -1,0 +1,369 @@
+body {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  /* ben-trai */
+  .khung-trai {
+    width: 65%;
+    height: 50vw;
+    padding: 5vw 5vw;
+  }
+  .btn-back {
+    border: none;
+    background: none;
+    font-size: 2vw;
+  }
+  /* logo */
+  .logo {
+    margin-left: 20vw;
+    width: 140px;
+    image-rendering: optimizeQuality;
+  }
+  
+  .p-change-1 {
+    color: #4e4c4c;
+    font-family: "Inter";
+    font-size: 2.5vw;
+    font-weight: 600;
+    margin-bottom: 2.5vh;
+  }
+  /* input */
+  .input-change {
+    border-radius: 10px;
+    background: #e7e7e7;
+    font-size: 1.3vw;
+    width: 80%;
+    height: 4vw;
+    padding-left: 1vw;
+    border: none;
+  }
+  
+  .hr-1 {
+    width: 100%;
+    margin-top: 3vh;
+    background: rgba(70, 70, 70, 0.7);
+  }
+  
+  .span-change {
+    font-size: 25px;
+    padding-left: 15px;
+  }
+  /* input radio-button */
+  input[type="radio"] {
+    height: 20px;
+    width: 18px;
+  }
+  input[type="radio"]:checked {
+    accent-color: #d9673a;
+  }
+  
+  /* ben-phai */
+  .khung-phai {
+    width: 35%;
+    height: 50vw;
+    background: #4278bd;
+    padding: 3vw 3vw;
+  }
+  .h1-change {
+    font-size: 3vw;
+    color: #f6f4ec;
+    text-align: center;
+  }
+  .hr-2 {
+    background: #f6f4ec;
+    width: 53%;
+    margin: 0px;
+    height: 1vh;
+    margin-bottom: 10vh;
+  }
+  .img-change-2 {
+    width: 7vw;
+    height: 15vh;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.25),-2px 4px 6px 0px rgba(255, 255, 255, 0.25) inset;
+  }
+  .p-change-2 {
+    color: #f6f4ec;
+    font-size: 1.5vw;
+  }
+  .hr-3 {
+    color: #f6f4ec;
+    margin-top: 5vh;
+  }
+  .button-change {
+    border-radius: 25px;
+    background: #f6f4ec;
+    width: 20vw;
+    height: 7.5vh;
+    font-size:2vw;
+    color:#5581A5;
+    font-family: "Inter";
+    margin-top: 10vh;
+  }
+  .scrollbar-2{
+    overflow: auto;
+    height: 30vh;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  /*chỉnh sửa thẻ p*/
+  p {
+    margin: 0px;
+  }
+  /* media */
+  @font-face {
+    font-family: Inter;
+    src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+  }
+  @media (max-width: 1399px) {
+    body{
+      margin-top: 10vw;
+    }
+    .logo {
+      width: 100px;
+    }
+    .input-change {
+      width: 75%;
+    }
+    .h1 {
+      font-size: 2.5vw;
+    }
+    input[type="radio"] {
+      height: 17px;
+      width: 15px;
+    }
+    .span-change {
+      font-size: 23px;
+    }
+    .hr-2{
+      margin-bottom: 8vh;
+    }
+  
+    .hr-3{
+      margin-top: 3vh;
+    }
+    .button-change{
+      width: 19vw;
+      height: 6.5vh;
+      margin-top: 8vh;
+      font-size: 1.5vw;
+    }
+    .img-change{
+      height: 9vh;
+    }
+    .scrollbar{
+      height: 12vh;
+    }
+  }
+  @media (max-width: 1113px) {
+    body{
+      margin-top: 14vw;
+    }
+    .logo {
+      width: 80px;
+    }
+    .input-change {
+      width: 70%;
+    }
+    .p-change-1 {
+      font-size: 2.5vw;
+      margin-bottom:1.5vh ;
+    }
+    hr {
+      margin-top: 2vh;
+    }
+    input[type="radio"] {
+      height: 14px;
+      width: 12px;
+    }
+    .span-change {
+      font-size: 20px;
+    }
+    .hr-2{
+      margin-bottom: 6vh;
+    }
+    .button-change{
+      width: 17vw;
+      height: 5vh;
+      margin-top: 6vh;
+      font-size: 1.5vw;
+    }
+    .scrollbar{
+      height: 7vh;
+    }
+  }
+  @media (max-width: 950px) {
+    body{
+      margin-top: 16vw;
+    }
+    .logo {
+      width: 80px;
+    }
+    .input-change {
+      width: 65%;
+    }
+    .p-change-1 {
+      font-size: 2.3vw;
+      margin-bottom: 1vh;
+    }
+    .hr-1{
+      margin-top: 1.5vh;
+    }
+    input[type="radio"] {
+      height: 11px;
+      width: 9px;
+    }
+    .span-change {
+      font-size: 17px;
+    }
+    .hr-2{
+      margin-bottom: 4vh;
+    }
+    .button-change{
+      width: 16vw;
+      height: 4.5vh;
+      margin-top: 6vh;
+      font-size: 1.5vw;
+    }
+    .img-change{
+      width: 6vw;
+      height: 7vh;
+    }
+  }
+  @media (max-width: 790px) {
+    body{
+      margin-top: 18vw;
+    }
+    .logo {
+      width: 80px;
+    }
+    .input-change {
+      width: 46%;
+      margin-right: 2vw;
+    }
+    hr {
+      margin-top: 1vh;
+    }
+    .p-change-1 {
+      font-size: 2.1vw;
+    }
+    input[type="radio"] {
+      height: 15px;
+      width: 12px;
+    }
+    .span-change {
+      font-size: 17px;
+    }
+    .hr-2{
+      margin-bottom: 4vh;
+    }
+    .button-change{
+      width: 16vw;
+      height: 4vh;
+      margin-top: 4vh;
+      font-size: 1.5vw;
+    }
+    .img-change{
+      width: 6vw;
+      height: 5vh;
+    }
+    .scrollbar{
+      height: 5vh;
+    }
+  }
+  @media (max-width: 697px) {
+    body{
+      margin-top: 20vw;
+    }
+    .logo {
+      width: 80px;
+    }
+    .input-change {
+      width: 46%;
+      margin-right: 2vw;
+    }
+    .p-change-1 {
+      font-size: 2vw;
+      margin-bottom: 0.5vh;
+    }
+    input[type="radio"] {
+      height: 11px;
+      width: 9px;
+    }
+    .span-change {
+      font-size: 14px;
+    }
+    .hr-2{
+      margin-bottom: 2vh;
+    }
+    .button-change{
+      width: 16vw;
+      height: 4vh;
+      margin-top: 3.5vh;
+      font-size: 1.5vw;
+    }
+    .img-change{
+      width: 5vw;
+      height: 4vh;
+    }
+  }
+  @media (max-width: 597px) {
+    .logo {
+      width: 80px;
+    }
+    .input-change {
+      width: 46%;
+      margin-right: 2vw;
+    }
+    .hr-1{
+      margin-top: 1.5vh;
+    }
+    .p-change-1 {
+      font-size: 2vw;
+      margin-bottom: 0.5vh;
+    }
+    input[type="radio"] {
+      height: 8px;
+      width: 6px;
+    }
+    .span-change {
+      font-size: 10px;
+    }
+    .hr-2{
+      margin-bottom: 2vh;
+    }
+    .button-change{
+      width: 14vw;
+      height: 3vh;
+      margin-top: 2vh;
+      font-size: 1.5vw;
+    }
+    .img-change{
+      width: 5vw;
+      height: 4vh;
+    }
+    .hr-3{
+      margin-top: 1.5vh;
+    }
+  }
+  

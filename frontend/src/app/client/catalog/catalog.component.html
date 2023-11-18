@@ -19,16 +19,21 @@
     <div class="row row-cols-3">
         <div class="col justify-content-center d-flex" *ngFor="let item of listSP">
             <div class="card mb-3">
+              <div style="background: url(/assets/Shared/search-bg.jpg); background-size: cover;" class="text-center">
                 <img src="http://localhost:3800/ProductImages/{{ item.hinhAnh[0].tenImageSP }}" class="proimage card-img-top p-2"/>
-                <div class="card-body">
-                    <h5 class="card-title fs-3">{{ item.tenSP }}</h5>
-                    <div class="col d-flex justify-content-between">
-                        <p class="card-text fs-5">
-                            {{ item.giaTien | currency : "VND" : " " }}Đ
-                        </p>
-                        <span><a href="#" (click)="changeToDetailPage(item._id)" class="btn">Mua</a></span>
-                    </div>
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title fs-3 ps-3 mt-3 mb-3" style="font-size: 40px;">{{ item.tenSP }}</h5>
+                <div class="col justify-content-between">
+                  <p class="card-text fs-5 ps-3 mt-3 mb-5" style="color: red">
+                    {{ item.giaTien | currency : "VND" : " " }}Đ
+                  </p>
+                  <div class="text-center">
+                    <a (click)="changeToDetailPage(item._id)" class="btn">Mua</a>
+                  </div>
                 </div>
+              </div>
             </div>
         </div>
     </div>

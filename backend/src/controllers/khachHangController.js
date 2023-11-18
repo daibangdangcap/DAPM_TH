@@ -2,7 +2,8 @@ var khachHangService=require('../services/khachHangService')
 
 var dangKy=async(req,res)=>{
     var user=await khachHangService.dangKy(req)
-    res.send(user)
+    if(user==="Email existed") res.send({error:user})
+    else res.send(user)
 }
 var getVerify=(req,res)=>{
     var verify=khachHangService.getVerify(req)
@@ -20,4 +21,7 @@ var dangNhap=async(req,res)=>{
     }
     else res.send(user)
 }
+
+
+
 module.exports={dangKy, getVerify,dangNhap}
